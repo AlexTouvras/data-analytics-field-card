@@ -1,0 +1,162 @@
+{
+  "frameworks": [
+    {
+      "name": "dbt",
+      "aliases": ["dbt Core", "dbt Cloud", "getdbt"],
+      "repos": ["dbt-labs/dbt-core"],
+      "docs": ["https://docs.getdbt.com/"],
+      "onCard": true,
+      "constraint": "transforms"
+    },
+    {
+      "name": "DuckDB",
+      "repos": ["duckdb/duckdb"],
+      "docs": ["https://duckdb.org/docs/"],
+      "onCard": true,
+      "constraint": "local-sql"
+    },
+    {
+      "name": "MotherDuck",
+      "repos": ["motherduckdb/wasm-client"],
+      "docs": ["https://motherduck.com/docs/"],
+      "onCard": true,
+      "constraint": "local-to-cloud"
+    },
+    {
+      "name": "Databricks",
+      "aliases": ["Spark", "Delta Lake"],
+      "repos": ["databricks/databricks-sdk-py"],
+      "docs": ["https://docs.databricks.com/"],
+      "onCard": true,
+      "constraint": "volume"
+    },
+    {
+      "name": "Apache Spark",
+      "repos": ["apache/spark"],
+      "docs": ["https://spark.apache.org/docs/latest/"],
+      "onCard": false,
+      "constraint": "volume"
+    },
+    {
+      "name": "Power BI",
+      "aliases": ["Microsoft Fabric", "Fabric"],
+      "repos": ["microsoft/powerbi-desktop-samples"],
+      "docs": ["https://learn.microsoft.com/en-us/power-bi/"],
+      "onCard": true,
+      "constraint": "consume"
+    },
+    {
+      "name": "Looker",
+      "aliases": ["LookML"],
+      "repos": ["looker-open-source/sdk-codegen"],
+      "docs": ["https://cloud.google.com/looker/docs"],
+      "onCard": true,
+      "constraint": "consume"
+    },
+    {
+      "name": "Tableau",
+      "repos": [],
+      "docs": ["https://help.tableau.com/"],
+      "onCard": false,
+      "constraint": "consume"
+    },
+    {
+      "name": "Semantic layer",
+      "aliases": ["dbt Semantic Layer", "MetricFlow"],
+      "repos": ["dbt-labs/metricflow"],
+      "docs": ["https://www.getdbt.com/product/semantic-layer"],
+      "onCard": true,
+      "constraint": "definitions"
+    },
+    {
+      "name": "OpenLineage",
+      "repos": ["OpenLineage/OpenLineage"],
+      "docs": ["https://openlineage.io/"],
+      "onCard": true,
+      "constraint": "lineage"
+    },
+    {
+      "name": "Dagster",
+      "repos": ["dagster-io/dagster"],
+      "docs": ["https://docs.dagster.io/"],
+      "onCard": false,
+      "constraint": "orchestration"
+    },
+    {
+      "name": "Apache Airflow",
+      "repos": ["apache/airflow"],
+      "docs": ["https://airflow.apache.org/docs/"],
+      "onCard": false,
+      "constraint": "orchestration"
+    },
+    {
+      "name": "Great Expectations",
+      "aliases": ["GX"],
+      "repos": ["great-expectations/great_expectations"],
+      "docs": ["https://docs.greatexpectations.io/"],
+      "onCard": false,
+      "constraint": "quality"
+    },
+    {
+      "name": "Evidence",
+      "repos": ["evidence-dev/evidence"],
+      "docs": ["https://docs.evidence.dev/"],
+      "onCard": false,
+      "constraint": "code-bi"
+    },
+    {
+      "name": "Hex",
+      "repos": [],
+      "docs": ["https://learn.hex.tech/"],
+      "onCard": false,
+      "constraint": "notebooks"
+    },
+    {
+      "name": "Snowflake",
+      "repos": [],
+      "docs": ["https://docs.snowflake.com/"],
+      "onCard": false,
+      "constraint": "warehouse"
+    },
+    {
+      "name": "BigQuery",
+      "repos": [],
+      "docs": ["https://cloud.google.com/bigquery/docs"],
+      "onCard": false,
+      "constraint": "warehouse"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "OpenLineage",
+      "aliases": ["openlineage"],
+      "repos": ["OpenLineage/OpenLineage"],
+      "docs": ["https://openlineage.io/"],
+      "onCard": true
+    },
+    {
+      "name": "Iceberg",
+      "aliases": ["Apache Iceberg"],
+      "repos": ["apache/iceberg"],
+      "docs": ["https://iceberg.apache.org/docs/latest/"],
+      "onCard": false
+    },
+    {
+      "name": "Delta Lake",
+      "repos": ["delta-io/delta"],
+      "docs": ["https://docs.delta.io/latest/index.html"],
+      "onCard": false
+    }
+  ],
+  "searchQueries": [
+    "analytics engineering framework stars:>500",
+    "semantic layer metrics stars:>200",
+    "data lineage openlineage stars:>200",
+    "\"data quality\" testing framework stars:>300",
+    "lakehouse engine stars:>1000"
+  ],
+  "ignoreRepos": [
+    "apache/hadoop",
+    "apache/hive"
+  ]
+}
