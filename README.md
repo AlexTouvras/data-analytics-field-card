@@ -30,7 +30,7 @@ Same fail-closed pattern as the Agentic AI Field Card:
 | Piece | What it does |
 |---|---|
 | **Friday GitHub Action (12:00 UTC)** | Discovers tools, checks doc links, bumps stamp, opens a **discovery PR**, Slack *discovery ready* (no Approve) |
-| **Friday Cursor judgment (14:00 UTC ≈ 17:00 EEST)** | GitHub Action Trigger Cursor judgment starts a Cloud Agent against the discovery PR; agent follows `docs/weekly-refresh-prompt.md`, writes `## Summary`, triggers Slack Approve notify |
+| **Friday Cursor Automation (17:00 local)** | Judges update vs no-change, edits `index.html` when earned, writes `## Summary`, triggers Slack Approve notify |
 | **Slack #orbit Approve** | Preview of proposed HTML + signed Approve/Skip (Orbit confirm page). Approve squash-merges; Skip closes |
 | **Judgment watchdog (Sat + Mon 06:00 UTC)** | If the weekly PR still lacks `## Summary`, pings #orbit (*judgment missed*); Monday fails the Actions run |
 | **Broken-link issue** | Opens a labeled issue when Use/tool URLs fail |
