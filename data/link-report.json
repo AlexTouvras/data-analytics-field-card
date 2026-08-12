@@ -1,1 +1,107 @@
-{"checkedAt":null,"total":0,"failed":0,"results":[]}
+{
+  "checkedAt": "2026-08-12T08:50:56.493Z",
+  "total": 20,
+  "failed": 0,
+  "results": [
+    {
+      "url": "https://alextouvras.com",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://cloud.google.com/looker/docs",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://docs.databricks.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://docs.databricks.com/en/lakehouse/index.html",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://docs.getdbt.com/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/build/building-models",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://duckdb.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://duckdb.org/docs/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://jupyter.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/stream-processing",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/databricks/delta/history",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-bi/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://motherduck.com/docs/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://openlineage.io/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://pandas.pydata.org/",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://support.microsoft.com/en-us/excel",
+      "ok": true,
+      "status": 200
+    },
+    {
+      "url": "https://www.getdbt.com/product/semantic-layer",
+      "ok": true,
+      "status": 200
+    }
+  ]
+}
