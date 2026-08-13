@@ -20,6 +20,8 @@ Discovery alone is not enough. Every run must end with an explicit **update** or
 This is **not** a Power BI / Fabric product card. The stable spine is:
 
 - **ASK → GRAIN → TRUTH → USE** stack
+- Verb line under the H1 (`Ask → name → define → consume`) — do not drop
+- **Always on** foundation strip (Security, Governance, Observability, Evals, Human Approve) — not picker items
 - Problem → use → example jobs (definitions, curated tables, notebooks, scorecards, risk auditability, lineage…)
 - Tool picker by **constraint** (transforms, local-sql, volume, consume, definitions, lineage…)
 - Ladder + anti-patterns + kill switch
