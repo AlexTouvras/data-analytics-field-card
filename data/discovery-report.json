@@ -1,1 +1,1078 @@
-{"generatedAt":null,"summary":{},"candidates":[]}
+{
+  "discoveredAt": "2026-08-21T14:04:49.852Z",
+  "summary": {
+    "watchlistItems": 20,
+    "notOnCard": 10,
+    "freshReleases": 7,
+    "novelSearchHits": 3,
+    "candidateCount": 13
+  },
+  "candidates": [
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Apache Spark",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 43847,
+      "docs": [
+        "https://spark.apache.org/docs/latest/"
+      ],
+      "repos": [
+        "apache/spark"
+      ],
+      "constraint": "volume",
+      "priority": "high"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Tableau",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": null,
+      "docs": [
+        "https://help.tableau.com/"
+      ],
+      "repos": [],
+      "constraint": "consume",
+      "priority": "low"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Dagster",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 16045,
+      "docs": [
+        "https://docs.dagster.io/"
+      ],
+      "repos": [
+        "dagster-io/dagster"
+      ],
+      "constraint": "orchestration",
+      "priority": "high"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Apache Airflow",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 46566,
+      "docs": [
+        "https://airflow.apache.org/docs/"
+      ],
+      "repos": [
+        "apache/airflow"
+      ],
+      "constraint": "orchestration",
+      "priority": "high"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Great Expectations",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 11728,
+      "docs": [
+        "https://docs.greatexpectations.io/"
+      ],
+      "repos": [
+        "great-expectations/great_expectations"
+      ],
+      "constraint": "quality",
+      "priority": "high"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Evidence",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 6867,
+      "docs": [
+        "https://docs.evidence.dev/"
+      ],
+      "repos": [
+        "evidence-dev/evidence"
+      ],
+      "constraint": "code-bi",
+      "priority": "high"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Hex",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": null,
+      "docs": [
+        "https://learn.hex.tech/"
+      ],
+      "repos": [],
+      "constraint": "notebooks",
+      "priority": "low"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Snowflake",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": null,
+      "docs": [
+        "https://docs.snowflake.com/"
+      ],
+      "repos": [],
+      "constraint": "warehouse",
+      "priority": "low"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "BigQuery",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": null,
+      "docs": [
+        "https://cloud.google.com/bigquery/docs"
+      ],
+      "repos": [],
+      "constraint": "warehouse",
+      "priority": "low"
+    },
+    {
+      "kind": "watchlist-not-on-card",
+      "name": "Iceberg",
+      "reason": "Tracked in watchlist but not present on the public card",
+      "stars": 9157,
+      "docs": [
+        "https://iceberg.apache.org/docs/latest/"
+      ],
+      "repos": [
+        "apache/iceberg"
+      ],
+      "constraint": null,
+      "priority": "high"
+    },
+    {
+      "kind": "github-search-novel",
+      "name": "lakekeeper",
+      "reason": "Apache Iceberg REST Catalog in Rust — access control, credential vending and audit for every engine and AI agent. Apache 2.0.",
+      "stars": 1423,
+      "docs": [
+        "https://docs.lakekeeper.io"
+      ],
+      "repos": [
+        "lakekeeper/lakekeeper"
+      ],
+      "htmlUrl": "https://github.com/lakekeeper/lakekeeper",
+      "priority": "medium"
+    },
+    {
+      "kind": "github-search-novel",
+      "name": "omnigraph",
+      "reason": "Lakehouse native graph engine with git-style workflows",
+      "stars": 1072,
+      "docs": [
+        "https://omnigraph.dev"
+      ],
+      "repos": [
+        "ModernRelay/omnigraph"
+      ],
+      "htmlUrl": "https://github.com/ModernRelay/omnigraph",
+      "priority": "medium"
+    },
+    {
+      "kind": "github-search-novel",
+      "name": "mprove",
+      "reason": "Open Source Agentic Business Intelligence with Malloy Semantic Layer :tada:",
+      "stars": 338,
+      "docs": [
+        "https://mprove.io"
+      ],
+      "repos": [
+        "mprove-io/mprove"
+      ],
+      "htmlUrl": "https://github.com/mprove-io/mprove",
+      "priority": "low"
+    }
+  ],
+  "freshReleases": [
+    {
+      "name": "dbt",
+      "onCard": true,
+      "release": {
+        "tag": "v1.12.3",
+        "publishedAt": "2026-08-21T00:28:55Z",
+        "url": "https://github.com/dbt-labs/dbt-core/releases/tag/v1.12.3"
+      },
+      "daysSinceRelease": 0
+    },
+    {
+      "name": "Databricks",
+      "onCard": true,
+      "release": {
+        "tag": "v0.133.0",
+        "publishedAt": "2026-08-19T04:31:53Z",
+        "url": "https://github.com/databricks/databricks-sdk-py/releases/tag/v0.133.0"
+      },
+      "daysSinceRelease": 2
+    },
+    {
+      "name": "Semantic layer",
+      "onCard": true,
+      "release": {
+        "tag": "v0.212.0",
+        "publishedAt": "2026-08-19T20:47:35Z",
+        "url": "https://github.com/dbt-labs/metricflow/releases/tag/v0.212.0"
+      },
+      "daysSinceRelease": 1
+    },
+    {
+      "name": "Dagster",
+      "onCard": false,
+      "release": {
+        "tag": "1.13.18",
+        "publishedAt": "2026-08-14T19:59:51Z",
+        "url": "https://github.com/dagster-io/dagster/releases/tag/1.13.18"
+      },
+      "daysSinceRelease": 6
+    },
+    {
+      "name": "Apache Airflow",
+      "onCard": false,
+      "release": {
+        "tag": "3.3.1",
+        "publishedAt": "2026-08-12T09:50:17Z",
+        "url": "https://github.com/apache/airflow/releases/tag/3.3.1"
+      },
+      "daysSinceRelease": 9
+    },
+    {
+      "name": "Great Expectations",
+      "onCard": false,
+      "release": {
+        "tag": "1.21.0",
+        "publishedAt": "2026-08-19T17:10:37Z",
+        "url": "https://github.com/fivetran/great_expectations/releases/tag/1.21.0"
+      },
+      "daysSinceRelease": 1
+    },
+    {
+      "name": "Delta Lake",
+      "onCard": true,
+      "release": {
+        "tag": "v4.4.0",
+        "publishedAt": "2026-08-20T16:52:49Z",
+        "url": "https://github.com/delta-io/delta/releases/tag/v4.4.0"
+      },
+      "daysSinceRelease": 0
+    }
+  ],
+  "watchlistStatus": [
+    {
+      "name": "dbt",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "transforms",
+      "docs": [
+        "https://docs.getdbt.com/"
+      ],
+      "repos": [
+        {
+          "fullName": "dbt-labs/dbt-core",
+          "stars": 13673,
+          "forks": 2515,
+          "pushedAt": "2026-08-21T13:49:58Z",
+          "description": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
+          "homepage": "https://getdbt.com",
+          "topics": [
+            "analytics",
+            "business-intelligence",
+            "data-modeling",
+            "dbt-viewpoint",
+            "elt",
+            "pypa",
+            "slack"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "v1.12.3",
+            "publishedAt": "2026-08-21T00:28:55Z",
+            "url": "https://github.com/dbt-labs/dbt-core/releases/tag/v1.12.3"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 0
+        }
+      ],
+      "signal": {
+        "stars": 13673,
+        "daysSincePush": 0,
+        "daysSinceRelease": 0,
+        "latestRelease": {
+          "tag": "v1.12.3",
+          "publishedAt": "2026-08-21T00:28:55Z",
+          "url": "https://github.com/dbt-labs/dbt-core/releases/tag/v1.12.3"
+        }
+      }
+    },
+    {
+      "name": "DuckDB",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "local-sql",
+      "docs": [
+        "https://duckdb.org/docs/"
+      ],
+      "repos": [
+        {
+          "fullName": "duckdb/duckdb",
+          "stars": 40502,
+          "forks": 3590,
+          "pushedAt": "2026-08-20T18:48:29Z",
+          "description": "DuckDB is an analytical in-process SQL database management system",
+          "homepage": "http://www.duckdb.org",
+          "topics": [
+            "analytics",
+            "database",
+            "embedded-database",
+            "olap",
+            "sql"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "v1.5.5",
+            "publishedAt": "2026-07-22T10:51:50Z",
+            "url": "https://github.com/duckdb/duckdb/releases/tag/v1.5.5"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 30
+        }
+      ],
+      "signal": {
+        "stars": 40502,
+        "daysSincePush": 0,
+        "daysSinceRelease": 30,
+        "latestRelease": {
+          "tag": "v1.5.5",
+          "publishedAt": "2026-07-22T10:51:50Z",
+          "url": "https://github.com/duckdb/duckdb/releases/tag/v1.5.5"
+        }
+      }
+    },
+    {
+      "name": "MotherDuck",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "local-to-cloud",
+      "docs": [
+        "https://motherduck.com/docs/"
+      ],
+      "repos": [
+        {
+          "fullName": "motherduckdb/wasm-client",
+          "stars": 64,
+          "forks": 9,
+          "pushedAt": "2026-07-01T23:04:58Z",
+          "description": "Examples for the MotherDuck WASM Client library, enabling MotherDuck integration for WebAssembly-powered DuckDB",
+          "homepage": "https://motherduckdb.github.io/wasm-client/mosaic-integration/",
+          "topics": [
+            "duckdb",
+            "mosaic",
+            "motherduck",
+            "wasm"
+          ],
+          "archived": false,
+          "latestRelease": null,
+          "daysSincePush": 50,
+          "daysSinceRelease": null
+        }
+      ],
+      "signal": {
+        "stars": 64,
+        "daysSincePush": 50,
+        "daysSinceRelease": null,
+        "latestRelease": null
+      }
+    },
+    {
+      "name": "Databricks",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "volume",
+      "docs": [
+        "https://docs.databricks.com/"
+      ],
+      "repos": [
+        {
+          "fullName": "databricks/databricks-sdk-py",
+          "stars": 563,
+          "forks": 213,
+          "pushedAt": "2026-08-19T04:15:08Z",
+          "description": "Databricks SDK for Python (Beta)",
+          "homepage": "https://databricks-sdk-py.readthedocs.io/",
+          "topics": [
+            "databricks",
+            "databricks-sdk",
+            "python"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "v0.133.0",
+            "publishedAt": "2026-08-19T04:31:53Z",
+            "url": "https://github.com/databricks/databricks-sdk-py/releases/tag/v0.133.0"
+          },
+          "daysSincePush": 2,
+          "daysSinceRelease": 2
+        }
+      ],
+      "signal": {
+        "stars": 563,
+        "daysSincePush": 2,
+        "daysSinceRelease": 2,
+        "latestRelease": {
+          "tag": "v0.133.0",
+          "publishedAt": "2026-08-19T04:31:53Z",
+          "url": "https://github.com/databricks/databricks-sdk-py/releases/tag/v0.133.0"
+        }
+      }
+    },
+    {
+      "name": "Apache Spark",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "volume",
+      "docs": [
+        "https://spark.apache.org/docs/latest/"
+      ],
+      "repos": [
+        {
+          "fullName": "apache/spark",
+          "stars": 43847,
+          "forks": 29338,
+          "pushedAt": "2026-08-21T13:23:50Z",
+          "description": "Apache Spark - A unified analytics engine for large-scale data processing",
+          "homepage": "https://spark.apache.org/",
+          "topics": [
+            "big-data",
+            "java",
+            "jdbc",
+            "python",
+            "r",
+            "scala",
+            "spark",
+            "sql"
+          ],
+          "archived": false,
+          "latestRelease": null,
+          "daysSincePush": 0,
+          "daysSinceRelease": null
+        }
+      ],
+      "signal": {
+        "stars": 43847,
+        "daysSincePush": 0,
+        "daysSinceRelease": null,
+        "latestRelease": null
+      }
+    },
+    {
+      "name": "Power BI",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "consume",
+      "docs": [
+        "https://learn.microsoft.com/en-us/power-bi/"
+      ],
+      "repos": [
+        {
+          "fullName": "microsoft/powerbi-desktop-samples",
+          "stars": 2079,
+          "forks": 1156,
+          "pushedAt": "2026-08-20T22:40:30Z",
+          "description": "Power BI Desktop sample files for the monthly release. Here you can find the PBIX files used in the monthly release videos.",
+          "homepage": null,
+          "topics": [],
+          "archived": false,
+          "latestRelease": null,
+          "daysSincePush": 0,
+          "daysSinceRelease": null
+        }
+      ],
+      "signal": {
+        "stars": 2079,
+        "daysSincePush": 0,
+        "daysSinceRelease": null,
+        "latestRelease": null
+      }
+    },
+    {
+      "name": "Looker",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "consume",
+      "docs": [
+        "https://cloud.google.com/looker/docs"
+      ],
+      "repos": [
+        {
+          "fullName": "looker-open-source/sdk-codegen",
+          "stars": 272,
+          "forks": 203,
+          "pushedAt": "2026-08-14T18:15:07Z",
+          "description": "One SDK to rule them all, and in the codegen bind them",
+          "homepage": "",
+          "topics": [
+            "api",
+            "code-generator",
+            "csharp",
+            "kotlin",
+            "looker-api",
+            "looker-sdk",
+            "openapi-generator",
+            "openapi-specification",
+            "python",
+            "sdk",
+            "swift",
+            "swift5",
+            "typescript"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "looker_sdk-v26.12.0",
+            "publishedAt": "2026-07-13T20:35:48Z",
+            "url": "https://github.com/looker-open-source/sdk-codegen/releases/tag/looker_sdk-v26.12.0"
+          },
+          "daysSincePush": 6,
+          "daysSinceRelease": 38
+        }
+      ],
+      "signal": {
+        "stars": 272,
+        "daysSincePush": 6,
+        "daysSinceRelease": 38,
+        "latestRelease": {
+          "tag": "looker_sdk-v26.12.0",
+          "publishedAt": "2026-07-13T20:35:48Z",
+          "url": "https://github.com/looker-open-source/sdk-codegen/releases/tag/looker_sdk-v26.12.0"
+        }
+      }
+    },
+    {
+      "name": "Tableau",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "consume",
+      "docs": [
+        "https://help.tableau.com/"
+      ],
+      "repos": [],
+      "signal": null
+    },
+    {
+      "name": "Semantic layer",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "definitions",
+      "docs": [
+        "https://www.getdbt.com/product/semantic-layer"
+      ],
+      "repos": [
+        {
+          "fullName": "dbt-labs/metricflow",
+          "stars": 1756,
+          "forks": 198,
+          "pushedAt": "2026-08-20T21:41:49Z",
+          "description": "MetricFlow allows you to define, build, and maintain metrics in code.",
+          "homepage": "https://docs.getdbt.com/docs/build/about-metricflow",
+          "topics": [
+            "analytics",
+            "business-intelligence",
+            "data",
+            "data-modeling",
+            "metrics",
+            "pypi",
+            "semantic-layer"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "v0.212.0",
+            "publishedAt": "2026-08-19T20:47:35Z",
+            "url": "https://github.com/dbt-labs/metricflow/releases/tag/v0.212.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 1
+        }
+      ],
+      "signal": {
+        "stars": 1756,
+        "daysSincePush": 0,
+        "daysSinceRelease": 1,
+        "latestRelease": {
+          "tag": "v0.212.0",
+          "publishedAt": "2026-08-19T20:47:35Z",
+          "url": "https://github.com/dbt-labs/metricflow/releases/tag/v0.212.0"
+        }
+      }
+    },
+    {
+      "name": "OpenLineage",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": "lineage",
+      "docs": [
+        "https://openlineage.io/"
+      ],
+      "repos": [
+        {
+          "fullName": "OpenLineage/OpenLineage",
+          "stars": 2615,
+          "forks": 518,
+          "pushedAt": "2026-08-21T08:32:37Z",
+          "description": "An Open Standard for lineage metadata collection",
+          "homepage": "http://openlineage.io",
+          "topics": [],
+          "archived": false,
+          "latestRelease": {
+            "tag": "1.52.0",
+            "publishedAt": "2026-07-23T16:03:13Z",
+            "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.52.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 28
+        }
+      ],
+      "signal": {
+        "stars": 2615,
+        "daysSincePush": 0,
+        "daysSinceRelease": 28,
+        "latestRelease": {
+          "tag": "1.52.0",
+          "publishedAt": "2026-07-23T16:03:13Z",
+          "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.52.0"
+        }
+      }
+    },
+    {
+      "name": "Dagster",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "orchestration",
+      "docs": [
+        "https://docs.dagster.io/"
+      ],
+      "repos": [
+        {
+          "fullName": "dagster-io/dagster",
+          "stars": 16045,
+          "forks": 2254,
+          "pushedAt": "2026-08-20T17:41:24Z",
+          "description": "An orchestration platform for the development, production, and observation of data assets.",
+          "homepage": "https://dagster.io",
+          "topics": [
+            "analytics",
+            "dagster",
+            "data-engineering",
+            "data-integration",
+            "data-orchestrator",
+            "data-pipelines",
+            "data-science",
+            "etl",
+            "metadata",
+            "mlops",
+            "orchestration",
+            "python",
+            "scheduler",
+            "workflow",
+            "workflow-automation"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "1.13.18",
+            "publishedAt": "2026-08-14T19:59:51Z",
+            "url": "https://github.com/dagster-io/dagster/releases/tag/1.13.18"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 6
+        }
+      ],
+      "signal": {
+        "stars": 16045,
+        "daysSincePush": 0,
+        "daysSinceRelease": 6,
+        "latestRelease": {
+          "tag": "1.13.18",
+          "publishedAt": "2026-08-14T19:59:51Z",
+          "url": "https://github.com/dagster-io/dagster/releases/tag/1.13.18"
+        }
+      }
+    },
+    {
+      "name": "Apache Airflow",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "orchestration",
+      "docs": [
+        "https://airflow.apache.org/docs/"
+      ],
+      "repos": [
+        {
+          "fullName": "apache/airflow",
+          "stars": 46566,
+          "forks": 17636,
+          "pushedAt": "2026-08-21T13:47:16Z",
+          "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
+          "homepage": "https://airflow.apache.org/",
+          "topics": [
+            "airflow",
+            "apache",
+            "apache-airflow",
+            "automation",
+            "dag",
+            "data-engineering",
+            "data-integration",
+            "data-orchestrator",
+            "data-pipelines",
+            "data-science",
+            "elt",
+            "etl",
+            "machine-learning",
+            "mlops",
+            "orchestration",
+            "python",
+            "scheduler",
+            "workflow",
+            "workflow-engine",
+            "workflow-orchestration"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "3.3.1",
+            "publishedAt": "2026-08-12T09:50:17Z",
+            "url": "https://github.com/apache/airflow/releases/tag/3.3.1"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 9
+        }
+      ],
+      "signal": {
+        "stars": 46566,
+        "daysSincePush": 0,
+        "daysSinceRelease": 9,
+        "latestRelease": {
+          "tag": "3.3.1",
+          "publishedAt": "2026-08-12T09:50:17Z",
+          "url": "https://github.com/apache/airflow/releases/tag/3.3.1"
+        }
+      }
+    },
+    {
+      "name": "Great Expectations",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "quality",
+      "docs": [
+        "https://docs.greatexpectations.io/"
+      ],
+      "repos": [
+        {
+          "fullName": "great-expectations/great_expectations",
+          "stars": 11728,
+          "forks": 1802,
+          "pushedAt": "2026-08-21T02:27:31Z",
+          "description": "Always know what to expect from your data.",
+          "homepage": "https://docs.greatexpectations.io/",
+          "topics": [
+            "cleandata",
+            "data-engineering",
+            "data-profilers",
+            "data-profiling",
+            "data-quality",
+            "data-science",
+            "data-unit-tests",
+            "datacleaner",
+            "datacleaning",
+            "dataquality",
+            "dataunittest",
+            "eda",
+            "exploratory-analysis",
+            "exploratory-data-analysis",
+            "exploratorydataanalysis",
+            "mlops",
+            "pipeline",
+            "pipeline-debt",
+            "pipeline-testing",
+            "pipeline-tests"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "1.21.0",
+            "publishedAt": "2026-08-19T17:10:37Z",
+            "url": "https://github.com/fivetran/great_expectations/releases/tag/1.21.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 1
+        }
+      ],
+      "signal": {
+        "stars": 11728,
+        "daysSincePush": 0,
+        "daysSinceRelease": 1,
+        "latestRelease": {
+          "tag": "1.21.0",
+          "publishedAt": "2026-08-19T17:10:37Z",
+          "url": "https://github.com/fivetran/great_expectations/releases/tag/1.21.0"
+        }
+      }
+    },
+    {
+      "name": "Evidence",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "code-bi",
+      "docs": [
+        "https://docs.evidence.dev/"
+      ],
+      "repos": [
+        {
+          "fullName": "evidence-dev/evidence",
+          "stars": 6867,
+          "forks": 397,
+          "pushedAt": "2026-08-21T00:27:01Z",
+          "description": "Business intelligence as code: build fast, interactive data visualizations in SQL and markdown",
+          "homepage": "https://evidence.dev",
+          "topics": [
+            "analytics",
+            "business-intelligence",
+            "dashboard",
+            "data-engineering",
+            "data-science",
+            "data-visualization",
+            "dbt",
+            "duckdb",
+            "exploratory-data-analysis",
+            "self-hosted",
+            "sql",
+            "svelte",
+            "tailwindcss",
+            "webassembly"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "@evidence-dev/evidence@40.1.8",
+            "publishedAt": "2026-02-06T16:08:58Z",
+            "url": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 195
+        }
+      ],
+      "signal": {
+        "stars": 6867,
+        "daysSincePush": 0,
+        "daysSinceRelease": 195,
+        "latestRelease": {
+          "tag": "@evidence-dev/evidence@40.1.8",
+          "publishedAt": "2026-02-06T16:08:58Z",
+          "url": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+        }
+      }
+    },
+    {
+      "name": "Hex",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "notebooks",
+      "docs": [
+        "https://learn.hex.tech/"
+      ],
+      "repos": [],
+      "signal": null
+    },
+    {
+      "name": "Snowflake",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "warehouse",
+      "docs": [
+        "https://docs.snowflake.com/"
+      ],
+      "repos": [],
+      "signal": null
+    },
+    {
+      "name": "BigQuery",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": "warehouse",
+      "docs": [
+        "https://cloud.google.com/bigquery/docs"
+      ],
+      "repos": [],
+      "signal": null
+    },
+    {
+      "name": "OpenLineage",
+      "onCard": true,
+      "onCardDetected": true,
+      "constraint": null,
+      "docs": [
+        "https://openlineage.io/"
+      ],
+      "repos": [
+        {
+          "fullName": "OpenLineage/OpenLineage",
+          "stars": 2615,
+          "forks": 518,
+          "pushedAt": "2026-08-21T08:32:37Z",
+          "description": "An Open Standard for lineage metadata collection",
+          "homepage": "http://openlineage.io",
+          "topics": [],
+          "archived": false,
+          "latestRelease": {
+            "tag": "1.52.0",
+            "publishedAt": "2026-07-23T16:03:13Z",
+            "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.52.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 28
+        }
+      ],
+      "signal": {
+        "stars": 2615,
+        "daysSincePush": 0,
+        "daysSinceRelease": 28,
+        "latestRelease": {
+          "tag": "1.52.0",
+          "publishedAt": "2026-07-23T16:03:13Z",
+          "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.52.0"
+        }
+      }
+    },
+    {
+      "name": "Iceberg",
+      "onCard": false,
+      "onCardDetected": false,
+      "constraint": null,
+      "docs": [
+        "https://iceberg.apache.org/docs/latest/"
+      ],
+      "repos": [
+        {
+          "fullName": "apache/iceberg",
+          "stars": 9157,
+          "forks": 3462,
+          "pushedAt": "2026-08-21T12:29:35Z",
+          "description": "Apache Iceberg",
+          "homepage": "https://iceberg.apache.org/",
+          "topics": [
+            "apache",
+            "hacktoberfest",
+            "iceberg"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "apache-iceberg-1.11.0",
+            "publishedAt": "2026-05-20T08:47:57Z",
+            "url": "https://github.com/apache/iceberg/releases/tag/apache-iceberg-1.11.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 93
+        }
+      ],
+      "signal": {
+        "stars": 9157,
+        "daysSincePush": 0,
+        "daysSinceRelease": 93,
+        "latestRelease": {
+          "tag": "apache-iceberg-1.11.0",
+          "publishedAt": "2026-05-20T08:47:57Z",
+          "url": "https://github.com/apache/iceberg/releases/tag/apache-iceberg-1.11.0"
+        }
+      }
+    },
+    {
+      "name": "Delta Lake",
+      "onCard": false,
+      "onCardDetected": true,
+      "constraint": null,
+      "docs": [
+        "https://docs.delta.io/latest/index.html"
+      ],
+      "repos": [
+        {
+          "fullName": "delta-io/delta",
+          "stars": 8943,
+          "forks": 2156,
+          "pushedAt": "2026-08-21T03:50:43Z",
+          "description": "An open-source storage framework that enables building a Lakehouse architecture with compute engines including Spark, PrestoDB, Flink, Trino, and Hive and APIs",
+          "homepage": "https://delta.io",
+          "topics": [
+            "acid",
+            "analytics",
+            "big-data",
+            "delta-lake",
+            "spark"
+          ],
+          "archived": false,
+          "latestRelease": {
+            "tag": "v4.4.0",
+            "publishedAt": "2026-08-20T16:52:49Z",
+            "url": "https://github.com/delta-io/delta/releases/tag/v4.4.0"
+          },
+          "daysSincePush": 0,
+          "daysSinceRelease": 0
+        }
+      ],
+      "signal": {
+        "stars": 8943,
+        "daysSincePush": 0,
+        "daysSinceRelease": 0,
+        "latestRelease": {
+          "tag": "v4.4.0",
+          "publishedAt": "2026-08-20T16:52:49Z",
+          "url": "https://github.com/delta-io/delta/releases/tag/v4.4.0"
+        }
+      }
+    }
+  ],
+  "searchHits": [
+    {
+      "query": "analytics engineering framework stars:>500",
+      "error": null,
+      "top": []
+    },
+    {
+      "query": "semantic layer metrics stars:>200",
+      "error": null,
+      "top": [
+        {
+          "fullName": "mprove-io/mprove",
+          "stars": 338
+        }
+      ]
+    },
+    {
+      "query": "data lineage openlineage stars:>200",
+      "error": null,
+      "top": []
+    },
+    {
+      "query": "\"data quality\" testing framework stars:>300",
+      "error": null,
+      "top": []
+    },
+    {
+      "query": "lakehouse engine stars:>1000",
+      "error": null,
+      "top": [
+        {
+          "fullName": "prestodb/presto",
+          "stars": 16721
+        },
+        {
+          "fullName": "StarRocks/starrocks",
+          "stars": 12027
+        },
+        {
+          "fullName": "delta-io/delta",
+          "stars": 8943
+        },
+        {
+          "fullName": "lakekeeper/lakekeeper",
+          "stars": 1423
+        },
+        {
+          "fullName": "apache/incubator-xtable",
+          "stars": 1202
+        }
+      ]
+    }
+  ]
+}
