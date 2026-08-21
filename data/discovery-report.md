@@ -1,6 +1,6 @@
 # Discovery report
 
-Generated: 2026-08-21T12:57:18.266Z
+Generated: 2026-08-21T14:04:49.852Z
 
 - Candidates: **13**
 - Watchlist items not on card: **10**
@@ -17,7 +17,7 @@ Generated: 2026-08-21T12:57:18.266Z
 - **Dagster** (high) — watchlist-not-on-card; stars=16045; Tracked in watchlist but not present on the public card
   - docs: https://docs.dagster.io/
   - repo: https://github.com/dagster-io/dagster
-- **Apache Airflow** (high) — watchlist-not-on-card; stars=46565; Tracked in watchlist but not present on the public card
+- **Apache Airflow** (high) — watchlist-not-on-card; stars=46566; Tracked in watchlist but not present on the public card
   - docs: https://airflow.apache.org/docs/
   - repo: https://github.com/apache/airflow
 - **Great Expectations** (high) — watchlist-not-on-card; stars=11728; Tracked in watchlist but not present on the public card

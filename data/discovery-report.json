@@ -1,5 +1,5 @@
 {
-  "discoveredAt": "2026-08-21T12:57:18.266Z",
+  "discoveredAt": "2026-08-21T14:04:49.852Z",
   "summary": {
     "watchlistItems": 20,
     "notOnCard": 10,
@@ -52,7 +52,7 @@
       "kind": "watchlist-not-on-card",
       "name": "Apache Airflow",
       "reason": "Tracked in watchlist but not present on the public card",
-      "stars": 46565,
+      "stars": 46566,
       "docs": [
         "https://airflow.apache.org/docs/"
       ],
@@ -269,7 +269,7 @@
           "fullName": "dbt-labs/dbt-core",
           "stars": 13673,
           "forks": 2515,
-          "pushedAt": "2026-08-21T12:38:34Z",
+          "pushedAt": "2026-08-21T13:49:58Z",
           "description": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
           "homepage": "https://getdbt.com",
           "topics": [
@@ -314,7 +314,7 @@
         {
           "fullName": "duckdb/duckdb",
           "stars": 40502,
-          "forks": 3591,
+          "forks": 3590,
           "pushedAt": "2026-08-20T18:48:29Z",
           "description": "DuckDB is an analytical in-process SQL database management system",
           "homepage": "http://www.duckdb.org",
@@ -435,8 +435,8 @@
         {
           "fullName": "apache/spark",
           "stars": 43847,
-          "forks": 29339,
-          "pushedAt": "2026-08-21T11:17:30Z",
+          "forks": 29338,
+          "pushedAt": "2026-08-21T13:23:50Z",
           "description": "Apache Spark - A unified analytics engine for large-scale data processing",
           "homepage": "https://spark.apache.org/",
           "topics": [
@@ -566,7 +566,7 @@
       "repos": [
         {
           "fullName": "dbt-labs/metricflow",
-          "stars": 1755,
+          "stars": 1756,
           "forks": 198,
           "pushedAt": "2026-08-20T21:41:49Z",
           "description": "MetricFlow allows you to define, build, and maintain metrics in code.",
@@ -591,7 +591,7 @@
         }
       ],
       "signal": {
-        "stars": 1755,
+        "stars": 1756,
         "daysSincePush": 0,
         "daysSinceRelease": 1,
         "latestRelease": {
@@ -704,9 +704,9 @@
       "repos": [
         {
           "fullName": "apache/airflow",
-          "stars": 46565,
-          "forks": 17635,
-          "pushedAt": "2026-08-21T12:50:05Z",
+          "stars": 46566,
+          "forks": 17636,
+          "pushedAt": "2026-08-21T13:47:16Z",
           "description": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
           "homepage": "https://airflow.apache.org/",
           "topics": [
@@ -742,7 +742,7 @@
         }
       ],
       "signal": {
-        "stars": 46565,
+        "stars": 46566,
         "daysSincePush": 0,
         "daysSinceRelease": 9,
         "latestRelease": {
@@ -764,7 +764,7 @@
         {
           "fullName": "great-expectations/great_expectations",
           "stars": 11728,
-          "forks": 1801,
+          "forks": 1802,
           "pushedAt": "2026-08-21T02:27:31Z",
           "description": "Always know what to expect from your data.",
           "homepage": "https://docs.greatexpectations.io/",
