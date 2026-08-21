@@ -1,14 +1,16 @@
 {
-  "mode": "cursor-automation",
-  "generatedAt": "2026-08-21T12:57:18.326Z",
+  "mode": "cursor-automation-judgment",
+  "generatedAt": "2026-08-21T14:10:00.000Z",
   "candidateCount": 13,
   "changelog": [
-    "Discovery complete — Cursor Automation applies picker/HTML judgment (no vendor LLM API in CI)"
+    "Decision: no HTML content change \u2014 picker stays at 7 constraint rows",
+    "Deferred orchestration/quality/code-BI/Iceberg/novel hits; incumbents keep constraints",
+    "Restored Changed line from CI placeholder; kept v2026.34 stamp"
   ],
   "deferred": [
     {
       "name": "Apache Spark",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://spark.apache.org/docs/latest/",
       "repos": [
         "apache/spark"
@@ -16,13 +18,13 @@
     },
     {
       "name": "Tableau",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "low: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://help.tableau.com/",
       "repos": []
     },
     {
       "name": "Dagster",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://docs.dagster.io/",
       "repos": [
         "dagster-io/dagster"
@@ -30,7 +32,7 @@
     },
     {
       "name": "Apache Airflow",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://airflow.apache.org/docs/",
       "repos": [
         "apache/airflow"
@@ -38,7 +40,7 @@
     },
     {
       "name": "Great Expectations",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://docs.greatexpectations.io/",
       "repos": [
         "great-expectations/great_expectations"
@@ -46,7 +48,7 @@
     },
     {
       "name": "Evidence",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://docs.evidence.dev/",
       "repos": [
         "evidence-dev/evidence"
@@ -54,25 +56,25 @@
     },
     {
       "name": "Hex",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "low: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://learn.hex.tech/",
       "repos": []
     },
     {
       "name": "Snowflake",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "low: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://docs.snowflake.com/",
       "repos": []
     },
     {
       "name": "BigQuery",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "low: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://cloud.google.com/bigquery/docs",
       "repos": []
     },
     {
       "name": "Iceberg",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "high: watchlist-not-on-card \u2014 Tracked in watchlist but not present on the public card",
       "docs": "https://iceberg.apache.org/docs/latest/",
       "repos": [
         "apache/iceberg"
@@ -80,7 +82,7 @@
     },
     {
       "name": "lakekeeper",
-      "why": "medium: github-search-novel — Apache Iceberg REST Catalog in Rust — access control, credential vending and audit for every engine and AI agent. Apache 2.0.",
+      "why": "medium: github-search-novel \u2014 Apache Iceberg REST Catalog in Rust \u2014 access control, credential vending and audit for every engine and AI agent. Apache 2.0.",
       "docs": "https://docs.lakekeeper.io",
       "repos": [
         "lakekeeper/lakekeeper"
@@ -88,12 +90,13 @@
     },
     {
       "name": "omnigraph",
-      "why": "medium: github-search-novel — Lakehouse native graph engine with git-style workflows",
+      "why": "medium: github-search-novel \u2014 Lakehouse native graph engine with git-style workflows",
       "docs": "https://omnigraph.dev",
       "repos": [
         "ModernRelay/omnigraph"
       ]
     }
   ],
-  "rows": null
+  "rows": null,
+  "decision": "no-html-content-change"
 }
