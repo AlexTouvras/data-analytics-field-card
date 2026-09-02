@@ -3,5 +3,8 @@ node_modules/
 *.log
 .Thumbs.db
 
-.state/
+.state/*
+!.state/ARCHITECTURE.md
+!.state/BACKLOG.md
+!.state/AUTOMATION_CONTRACT.md
 
