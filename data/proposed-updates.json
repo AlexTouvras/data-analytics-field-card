@@ -1,6 +1,6 @@
 {
   "mode": "cursor-automation",
-  "generatedAt": "2026-08-28T22:01:49.909Z",
+  "generatedAt": "2026-09-04T16:04:57.429Z",
   "candidateCount": 13,
   "changelog": [
     "Discovery complete — Cursor Automation applies picker/HTML judgment (no vendor LLM API in CI)"
