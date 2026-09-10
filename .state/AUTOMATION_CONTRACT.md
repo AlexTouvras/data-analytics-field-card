@@ -2,7 +2,7 @@
 
 > Weekly judgment automation; JSON backup in Orbit (`website`).
 
-**Last updated:** 2026-09-02
+**Last updated:** 2026-09-10
 
 ## Runtime
 
@@ -16,7 +16,7 @@
 
 ## Scope (one run = one item)
 
-One weekly pass: discovery judgment → update **or** explicit no-change → PR `## Summary` → Slack Approve notify.
+One weekly pass: discovery judgment → update **or** explicit no-change → PR `## Summary` → Friday 18:00 review publishes.
 
 ## Read order (before acting)
 
@@ -30,7 +30,7 @@ Do **not** depend on ProjectBrain MCP.
 
 1. `npm run discover` → decide update vs no-change
 2. PR with `## Summary` + `## Card preview` if updating
-3. `gh workflow run "Notify Slack approve"` — stop; human Approves in `#orbit`
+3. Stop. Do not notify Slack. Do not merge. Friday 18:00 review publishes.
 
 ## IDE coexistence
 
