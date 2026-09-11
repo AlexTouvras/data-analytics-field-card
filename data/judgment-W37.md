@@ -12,3 +12,10 @@
 ## Card preview
 
 Review agent will compare this HTML to live (stamp-only + Changed hygiene; picker unchanged).
+
+## PR status
+
+- Branch pushed: `chore/weekly-refresh-2026-W37` (`b04cb41`).
+- **Could not open PR:** cloud token lacks `pull_requests: write`; Automation Tools MCP has no `open_git_pr` this run.
+- Compare: https://github.com/AlexTouvras/data-analytics-field-card/compare/main...chore/weekly-refresh-2026-W37?expand=1
+- 18:00 review agent: open PR (paste `## Summary` / `## Card preview` from this file) then Apply review, or follow weekly-review-prompt no-PR path.
