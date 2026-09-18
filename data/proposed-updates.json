@@ -1,9 +1,9 @@
 {
   "mode": "cursor-automation",
-  "generatedAt": "2026-09-04T16:04:57.429Z",
+  "generatedAt": "2026-09-18T14:10:30.948Z",
   "candidateCount": 13,
   "changelog": [
-    "Discovery complete — Cursor Automation applies picker/HTML judgment (no vendor LLM API in CI)"
+    "W38 judgment: no picker/table HTML change; restored Changed from CI placeholder; bumped stamp to v2026.38 (stamp-only)"
   ],
   "deferred": [
     {
@@ -93,7 +93,16 @@
       "repos": [
         "ModernRelay/omnigraph"
       ]
+    },
+    {
+      "name": "mprove",
+      "why": "low: github-search-novel — Open Source Agentic Business Intelligence with Malloy Semantic Layer :tada:",
+      "docs": "https://mprove.io",
+      "repos": [
+        "mprove-io/mprove"
+      ]
     }
   ],
-  "rows": null
+  "rows": null,
+  "decision": "no-change"
 }
