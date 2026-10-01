@@ -1,98 +1,89 @@
 {
   "mode": "cursor-automation",
-  "generatedAt": "2026-09-04T16:04:57.429Z",
+  "generatedAt": "2026-10-01T14:04:13.949Z",
+  "decision": "no-html-content-change",
   "candidateCount": 13,
   "changelog": [
-    "Discovery complete — Cursor Automation applies picker/HTML judgment (no vendor LLM API in CI)"
+    "October discovery — no picker or decision-table change. Stamp moved to v2026.40 with Next: November. Changed restored to the last content note."
   ],
   "deferred": [
     {
       "name": "Apache Spark",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Volume constraint already held by Databricks. Freshness is not a new job.",
       "docs": "https://spark.apache.org/docs/latest/",
-      "repos": [
-        "apache/spark"
-      ]
+      "repos": ["apache/spark"]
     },
     {
       "name": "Tableau",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Consume constraint already held by Power BI / Looker.",
       "docs": "https://help.tableau.com/",
       "repos": []
     },
     {
       "name": "Dagster",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Orchestration is off the one-pager. Release 1.13.24 does not add a job.",
       "docs": "https://docs.dagster.io/",
-      "repos": [
-        "dagster-io/dagster"
-      ]
+      "repos": ["dagster-io/dagster"]
     },
     {
       "name": "Apache Airflow",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Orchestration is off the one-pager. Release 3.3.2 does not add a job.",
       "docs": "https://airflow.apache.org/docs/",
-      "repos": [
-        "apache/airflow"
-      ]
+      "repos": ["apache/airflow"]
     },
     {
       "name": "Great Expectations",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Quality stays on the Always-on Evals strip, not a picker row. Release 1.23.2 does not add a job.",
       "docs": "https://docs.greatexpectations.io/",
-      "repos": [
-        "great-expectations/great_expectations"
-      ]
+      "repos": ["great-expectations/great_expectations"]
     },
     {
       "name": "Evidence",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Code-BI sits under consume, already held by Power BI / Looker.",
       "docs": "https://docs.evidence.dev/",
-      "repos": [
-        "evidence-dev/evidence"
-      ]
+      "repos": ["evidence-dev/evidence"]
     },
     {
       "name": "Hex",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Notebook exploration already held by Python / Jupyter.",
       "docs": "https://learn.hex.tech/",
       "repos": []
     },
     {
       "name": "Snowflake",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Warehouse job already points at lakehouse compute. A second warehouse brand is not a new layer.",
       "docs": "https://docs.snowflake.com/",
       "repos": []
     },
     {
       "name": "BigQuery",
-      "why": "low: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Warehouse job already points at lakehouse compute. A second warehouse brand is not a new layer.",
       "docs": "https://cloud.google.com/bigquery/docs",
       "repos": []
     },
     {
       "name": "Iceberg",
-      "why": "high: watchlist-not-on-card — Tracked in watchlist but not present on the public card",
+      "why": "Table format under the volume/lakehouse lane. Release apache-iceberg-1.12.0 does not add a job.",
       "docs": "https://iceberg.apache.org/docs/latest/",
-      "repos": [
-        "apache/iceberg"
-      ]
+      "repos": ["apache/iceberg"]
     },
     {
       "name": "lakekeeper",
-      "why": "medium: github-search-novel — Apache Iceberg REST Catalog in Rust — access control, credential vending and audit for every engine and AI agent. Apache 2.0.",
+      "why": "Iceberg REST catalog. Novel, not a new stack layer.",
       "docs": "https://docs.lakekeeper.io",
-      "repos": [
-        "lakekeeper/lakekeeper"
-      ]
+      "repos": ["lakekeeper/lakekeeper"]
     },
     {
       "name": "omnigraph",
-      "why": "medium: github-search-novel — Lakehouse native graph engine with git-style workflows",
+      "why": "Lakehouse graph engine. Novel, not a new stack layer.",
       "docs": "https://omnigraph.dev",
-      "repos": [
-        "ModernRelay/omnigraph"
-      ]
+      "repos": ["ModernRelay/omnigraph"]
+    },
+    {
+      "name": "mprove",
+      "why": "Another semantic-layer brand. Definitions row already held by the semantic layer.",
+      "docs": "https://mprove.io",
+      "repos": ["mprove-io/mprove"]
     }
   ],
   "rows": null
