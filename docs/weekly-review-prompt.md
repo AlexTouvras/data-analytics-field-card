@@ -8,7 +8,7 @@ Follow the shared rules in Orbit `docs/architecture/field-card-review.md` if you
 
 ## Spine (Data Analytics)
 
-ASK → GRAIN → TRUTH → USE. Picker ≤7 by constraint. Not a Fabric / Power BI brochure.
+ASK → GRAIN → TRUTH → USE is the picture, followed by the reconciliation gate, the credit case, architecture, tool groups, anti-patterns, and the ladder. Teaching ECL figures are illustrative. Not a Fabric / Power BI brochure. Do not require the old problem table.
 
 ## Apply
 
