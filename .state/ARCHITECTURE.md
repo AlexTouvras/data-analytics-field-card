@@ -6,7 +6,7 @@ Standalone one-page field card. Public artifact is `index.html`. Maintenance not
 
 The card is a decision scene, not a reference table.
 
-1. Hero: the headline, the trust question, and a data stream into a decision screen.
+1. Hero: the headline and trust question sit on a scene of streams, a standing figure, and a decision screen (`assets/hero.jpg`). Stage marks are `assets/icon-ask.png`, `icon-grain.png`, `icon-truth.png`, and `icon-use.png`.
 2. Four connected layers — ASK, GRAIN, TRUTH, USE — each with a failure mode.
 3. Reconciliation gate: two illustrative ECL ratios, a gate, a published result. Always on sits beside it.
 4. Credit-risk case walking question, grain, truth, and decision.
