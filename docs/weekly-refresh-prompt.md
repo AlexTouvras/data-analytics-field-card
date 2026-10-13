@@ -15,10 +15,10 @@ This is **not** a Power BI / Fabric product card. The stable spine is:
 - **ASK → GRAIN → TRUTH → USE** as the picture (four chambers), not a problem table
 - Verb line under the H1 (`Ask → name → define → consume`) — do not drop
 - The question the card answers: can we trust this number enough to act on it?
-- One illustrative case walking those four layers. Do not invent portfolio results. A disagreement blocks publish.
-- **Always on** foundation strip (Security, Governance, Observability, Evals, Human Approve) — not picker items
-- Named practices by **constraint**, ≤ 7 (transforms, local-sql, volume, consume, definitions, lineage…)
-- Judgement lines, definition vs report, and the kill switch
+- One illustrative credit case walking those four layers. The reconciliation diagram uses teaching figures, not a portfolio result. A disagreement blocks publish.
+- **Always on** beside the gate (Security, Governance, Observability, Evals, Human Approve) — not picker items
+- Architecture, tool groups, anti-patterns, and the maturity ladder
+- Named practices grouped by constraint. A new brand is an example inside a group, not a new layer.
 
 Churn zone: practice links, concrete nouns in the case, doc URLs, version stamp. Do **not** restore the old problem table. Do **not** redesign the four layers for a renamed vendor feature.
 

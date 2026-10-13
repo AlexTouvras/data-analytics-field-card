@@ -6,13 +6,13 @@ Standalone one-page field card. Public artifact is `index.html`. Maintenance not
 
 The card is a decision scene, not a reference table.
 
-1. Headline and the question: can we trust this number enough to act on it?
-2. Four chambers — ASK, GRAIN, TRUTH, USE — with one illustrative credit case. Truth shows two measures and a blocked publish.
-3. Judgement: three lines, definition vs report, kill switch.
-4. Named practices, at most seven, chosen by constraint.
-5. Always on: Security, Governance, Observability, Evals, Human Approve.
+1. Hero: the headline, the trust question, and a data stream into a decision screen.
+2. Four connected layers — ASK, GRAIN, TRUTH, USE — each with a failure mode.
+3. Reconciliation gate: two illustrative ECL ratios, a gate, a published result. Always on sits beside it.
+4. Credit-risk case walking question, grain, truth, and decision.
+5. Bottom row: architecture plates, tool groups, anti-patterns, maturity ladder, then the kill switch.
 
-Accent is ice blue on a near-black navy sheet, with amber only for the unexplained gap. Motion is a particle stream; it stops for `prefers-reduced-motion`. Print flattens to a light sheet and shows every layer.
+Accent is ice blue and green on a near-black navy sheet. Amber marks the disagreeing report. Motion is a few sparks on the hero stream; it stops for `prefers-reduced-motion`. Print flattens to a light sheet.
 
 ## Automation
 
