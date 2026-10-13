@@ -17,7 +17,7 @@ gh workflow run "Apply review" --repo AlexTouvras/data-analytics-field-card -f p
 # or decision=decline
 ```
 
-Do not `gh pr merge`. Orbit's action does merge + site copy of `index.html` only. A merge from the GitHub button updates Pages only. alextouvras.com stays on the previous card until this command runs. Illustrations are loaded from the Pages `assets/` URLs because that copy does not transfer image files.
+A push to `main` copies the card onto alextouvras.com (`Sync site`). Apply review still merges the monthly PR and posts the Slack FYI. Do not skip that gate for a monthly refresh. A merge from the GitHub button also reaches the site, because the push itself runs the copy.
 
 ## Slack (#orbit) — one post per card
 

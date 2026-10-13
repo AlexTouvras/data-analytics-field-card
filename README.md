@@ -31,11 +31,12 @@ Same fail-closed pattern as the Agentic AI Field Card:
 |---|---|
 | **Friday Cursor Automation (17:00 local)** | Discovers tools, edits the card when earned, leaves the PR open |
 | **Friday review agent (18:00 local)** | The publish gate: publishes or keeps the previous card |
+| **Sync site** | On every push to `main` that changes the card, copy it onto alextouvras.com |
 | **Slack #orbit** | Laconic FYI after review (Review / Considered / Changed / Online + Check card). Not the gate |
 | **Mon watchdog** | If Friday review never applied, warn in #orbit to re-run the review agent |
 | **Broken-link issue** | Opens a labeled issue when Use/tool URLs fail |
 
-The Friday content agent runs `npm run discover`. `weekly-refresh.yml` is manual backup only (`workflow_dispatch`). The Friday 18:00 review agent is the publish gate (`Apply review`).
+The Friday content agent runs `npm run discover`. `weekly-refresh.yml` is manual backup only (`workflow_dispatch`). The Friday 18:00 review agent is the publish gate (`Apply review`). After that merge, and after any other push of the card to `main`, `Sync site` copies it onto alextouvras.com.
 
 ### Secrets (this repo)
 
