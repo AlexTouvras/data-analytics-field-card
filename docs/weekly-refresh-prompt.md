@@ -19,6 +19,7 @@ This is **not** a Power BI / Fabric product card. The stable spine is:
 - **Always on** beside the gate (Security, Governance, Observability, Evals, Human Approve) — not picker items
 - Architecture, tool groups, anti-patterns, and the maturity ladder
 - Named practices grouped by constraint. A new brand is an example inside a group, not a new layer.
+- Hero and stage images use the GitHub Pages `assets/` URLs. The site copy transfers `index.html` only, so relative `assets/` paths do not show on alextouvras.com.
 
 Churn zone: practice links, concrete nouns in the case, doc URLs, version stamp. Do **not** restore the old problem table. Do **not** redesign the four layers for a renamed vendor feature.
 
