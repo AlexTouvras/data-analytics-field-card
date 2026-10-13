@@ -19,9 +19,9 @@ Public artifact only. Editor / maintenance notes live **here** and under `docs/`
 
 | Is | Is not |
 |---|---|
-| Decision stack: ASK â†’ GRAIN â†’ TRUTH â†’ USE | A Power BI / Fabric product brochure |
-| When to use curated tables, metrics layers, notebooks, scorecards, lineage | An interview flashcard deck |
-| Tool picker by **constraint** | A complete catalog of vendors |
+| Decision stack: ASK → GRAIN → TRUTH → USE, drawn as the picture | A Power BI / Fabric product brochure |
+| One case: a disagreement blocks publish until someone names the gap | An interview flashcard deck |
+| Named practices by **constraint** (≤ 7) | A complete catalog of vendors |
 
 ## Automation (keeps the HTML honest)
 
@@ -57,10 +57,10 @@ Copy from Orbit / Vercel / the AI field-card repo:
 
 | Stable (edit rarely) | Churn zone (weekly OK) |
 |---|---|
-| 4-layer stack (ASK / GRAIN / TRUTH / USE) | Tool picker rows |
-| Problem â†’ use logic | Concrete product names in examples |
-| Definition vs report | Version stamp + Changed line + doc URLs |
-| Ladder, anti-patterns, kill switch | â€” |
+| 4-layer picture (ASK / GRAIN / TRUTH / USE) | Named-practice links |
+| The case: question, grain, reconcile, consume | Concrete nouns inside that case |
+| Definition vs report, kill switch | Version stamp + Changed line + doc URLs |
+| Always on | — |
 
 New protocols earn a **new layer** only if they solve a new job (question / grain / truth / consume). A renamed BI feature is a picker-row swap, not a redesign.
 
@@ -79,7 +79,7 @@ New protocols earn a **new layer** only if they solve a new job (question / grai
 ## Weekly refresh checklist (human)
 
 1. If Friday review missed, re-run the 18:00 review agent or `Apply review` — do not Slack-Approve
-2. Swap tool rows if the field moved
-3. Refresh example nouns if needed; keep the problem column intact
-4. Leave ladder and anti-patterns alone unless the pattern itself changed
-5. Keep the card tool-agnostic at the stack level â€” vendors live in the picker and examples only
+2. Swap a named practice if the field moved
+3. Refresh nouns inside the case if needed; keep the four layers intact
+4. Leave the kill switch and judgement lines alone unless the pattern itself changed
+5. Keep the card tool-agnostic at the stack level — vendors live in the practices and the case only

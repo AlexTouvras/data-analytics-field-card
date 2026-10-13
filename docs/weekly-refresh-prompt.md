@@ -12,32 +12,33 @@ Do **not** post Approve links from this run. The review agent is the gate. If th
 
 This is **not** a Power BI / Fabric product card. The stable spine is:
 
-- **ASK → GRAIN → TRUTH → USE** stack
+- **ASK → GRAIN → TRUTH → USE** as the picture (four chambers), not a problem table
 - Verb line under the H1 (`Ask → name → define → consume`) — do not drop
+- The question the card answers: can we trust this number enough to act on it?
+- One illustrative case walking those four layers. Do not invent portfolio results. A disagreement blocks publish.
 - **Always on** foundation strip (Security, Governance, Observability, Evals, Human Approve) — not picker items
-- Problem → use → example jobs (definitions, curated tables, notebooks, scorecards, risk auditability, lineage…)
-- Tool picker by **constraint** (transforms, local-sql, volume, consume, definitions, lineage…)
-- Ladder + anti-patterns + kill switch
+- Named practices by **constraint**, ≤ 7 (transforms, local-sql, volume, consume, definitions, lineage…)
+- Judgement lines, definition vs report, and the kill switch
 
-Churn zone: tool picker rows, concrete product nouns in examples, doc URLs, version stamp. Do **not** redesign the stack for a renamed vendor feature.
+Churn zone: practice links, concrete nouns in the case, doc URLs, version stamp. Do **not** restore the old problem table. Do **not** redesign the four layers for a renamed vendor feature.
 
 ## Steps
 
 1. Check out `AlexTouvras/data-analytics-field-card`. Prefer open branch `chore/weekly-refresh-YYYY-Www` for this ISO week; otherwise create/update it from `main`.
 2. Run `npm run discover` (GitHub access via `gh` in the Cloud Agent). Read `data/discovery-report.md` and the current `index.html`.
 3. **Decide (required):**
-   - **Update card** if a picker swap, docs URL fix, or new *job* in the decision table is earned.
+   - **Update card** if a practice swap, docs URL fix, or new *job* in the case is earned.
    - **No HTML change** if candidates are noise, picker is full with better incumbents, or nothing new belongs on a one-pager.
    - Write the decision in the PR `## Summary` either way. Never skip this step.
 4. If updating `index.html`:
-   - Tool picker ≤ 7 rows; swap by constraint (transforms, local-sql, volume, consume, definitions, lineage, orchestration…) — not hype or star count alone.
+   - Named practices ≤ 7; swap by constraint (transforms, local-sql, volume, consume, definitions, lineage, orchestration…) — not hype or star count alone.
    - Do not invent docs URLs; use discovery report, watchlist, or existing card links.
-   - Decision table: only if a new *job* appeared (new brand ≠ new layer).
-   - Keep Use labels short and linked; nuance in Example.
+   - A new *job* changes the case or a chamber’s failure, not the four layer names (new brand ≠ new layer).
+   - Keep practice labels short; nuance in the case.
    - No editor notes on the public HTML.
    - Prefer broad analytics language (SQL, Python, metrics, grain, lineage). Avoid making Fabric/Power BI the whole card.
    - Update the footer **Changed** line; bump version with `npm run bump:version` when the card content changed.
-5. If **no HTML change**: leave picker/table alone. Keep the weekly stamp CI (or you) already bumped. Stamp-only still ships — the review agent **approves** it. Still commit discovery artifacts if you re-ran discover on this branch.
+5. If **no HTML change**: leave the chambers and named practices alone. Keep the weekly stamp CI (or you) already bumped. Stamp-only still ships — the review agent **approves** it. Still commit discovery artifacts if you re-ran discover on this branch.
 6. Run `node scripts/check-links.mjs` and fix failures on any URLs you touched.
 7. Update `data/watchlist.json` for tools you confirm for ongoing tracking (`onCard` true/false).
 8. Commit and push to the weekly PR. Do not merge. Do not force-push `main`.

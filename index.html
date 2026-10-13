@@ -4,75 +4,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Data Analytics Field Card — When the number is real enough · Alex Touvras</title>
-  <meta name="description" content="A one-page decision card for analytics stacks: question, grain, truth layer, and consume path. Tools are lanes — not the map." />
+  <meta name="description" content="Analytics is a stack, not a dashboard. Ask, grain, truth, and use — a disagreement blocks publish until someone names the gap." />
   <meta name="author" content="Alex Touvras" />
+  <link rel="canonical" href="https://alextouvras.com/analytics-field-card/" />
   <meta property="og:title" content="Data Analytics Field Card — When the number is real enough" />
-  <meta property="og:description" content="Question → grain → truth → consume. Most teams need fewer tools than the pitch deck suggests." />
+  <meta property="og:description" content="Can we trust this number enough to act on it? Ask, grain, truth, then use." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alextouvras.com/analytics-field-card/" />
+  <meta property="og:image" content="https://alextouvras.com/opengraph-image" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://alextouvras.com/opengraph-image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #18212b;
-      --ink-soft: #3a4654;
-      --muted: #6b7785;
-      --line: #c9d2dc;
-      --paper: #eef2f6;
-      --card: #f8fafc;
-      --steel: #245a7a;
-      --steel-deep: #1a4158;
-      --signal: #0f766e;
-      --signal-soft: #d7ebe8;
-      --warn: #9a3412;
-      --warn-soft: #f3e0d6;
-      --layer-rag: #1e4d6b;
-      --layer-agent: #245a7a;
-      --layer-mcp: #0f766e;
-      --layer-a2a: #334155;
-      --shadow: 0 1px 0 rgba(24, 33, 43, 0.06), 0 12px 32px rgba(24, 33, 43, 0.06);
-      --radius: 10px;
+      --ink: #f4f7fb;
+      --ink-soft: #c5d2e0;
+      --muted: #8ea0b5;
+      --line: rgba(122, 176, 214, 0.22);
+      --paper: #080d14;
+      --card: #0c1420;
+      --cyan: #8fdfff;
+      --cyan-deep: #1a4158;
+      --amber: #e6a15a;
+      --stage-ink: #d7e6f4;
       --font-display: "Source Serif 4", Georgia, serif;
       --font-body: "Outfit", system-ui, sans-serif;
       --font-mono: "IBM Plex Mono", ui-monospace, monospace;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; color-scheme: dark; }
     body {
       margin: 0;
       color: var(--ink);
       background:
-        radial-gradient(1200px 500px at 10% -10%, rgba(36, 90, 122, 0.09), transparent 60%),
-        radial-gradient(900px 400px at 100% 0%, rgba(15, 118, 110, 0.07), transparent 55%),
+        radial-gradient(900px 420px at 78% -8%, rgba(90, 170, 220, 0.16), transparent 58%),
+        radial-gradient(700px 380px at 8% 0%, rgba(230, 161, 90, 0.05), transparent 50%),
         var(--paper);
       font-family: var(--font-body);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.45;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
     .sheet {
       width: min(1100px, calc(100% - 2rem));
       margin: 1.5rem auto 2.5rem;
-      background: var(--card);
-      border: 1px solid var(--line);
+      background:
+        radial-gradient(640px 240px at 80% 0%, rgba(80, 160, 220, 0.1), transparent 70%),
+        var(--card);
+      border: 1px solid rgba(122, 176, 214, 0.2);
       border-radius: 14px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
       overflow: hidden;
     }
 
     .topbar {
       display: flex;
       flex-wrap: wrap;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
-      gap: 0.75rem 1.5rem;
+      gap: 0.75rem 1.25rem;
       padding: 1rem 1.35rem;
       border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, #fbfcfd, #f3f6f9);
     }
 
     .eyebrow {
@@ -80,22 +76,18 @@
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--steel);
+      color: var(--cyan);
       font-weight: 600;
     }
 
-    .channels {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    .channels { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     .channels button,
     .channels a.btn {
       appearance: none;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--ink);
+      border: 1px solid rgba(122, 176, 214, 0.28);
+      background: transparent;
+      color: var(--ink-soft);
       font-family: var(--font-mono);
       font-size: 0.72rem;
       letter-spacing: 0.02em;
@@ -103,371 +95,505 @@
       border-radius: 999px;
       cursor: pointer;
       text-decoration: none;
-      transition: border-color 160ms ease, transform 120ms ease, background 160ms ease;
     }
 
     .channels button:hover,
-    .channels a.btn:hover {
-      border-color: var(--steel);
-      background: #f0f6fa;
+    .channels a.btn:hover { border-color: var(--cyan); color: var(--ink); }
+
+    .channels button:focus-visible,
+    .channels a.btn:focus-visible,
+    .chamber:focus-visible,
+    .source-row a:focus-visible,
+    .credit a:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 2px;
     }
 
-    .channels button:active,
-    .channels a.btn:active {
-      transform: scale(0.97);
-    }
-
-    header.hero {
-      padding: 1.5rem 1.35rem 1.25rem;
-      display: grid;
-      gap: 1.25rem;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: end;
-      border-bottom: 1px solid var(--line);
-    }
+    header.hero { padding: 1.6rem 1.35rem 1.25rem; }
 
     h1 {
-      margin: 0.35rem 0 0.55rem;
+      margin: 0.4rem 0 0.7rem;
       font-family: var(--font-display);
-      font-size: clamp(1.85rem, 3.4vw, 2.55rem);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      font-weight: 700;
+      font-size: clamp(2.15rem, 4.2vw, 3.15rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      font-weight: 650;
       max-width: 16ch;
+    }
+
+    .hook {
+      margin: 0 0 0.55rem;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      max-width: 28ch;
+    }
+
+    .verbs {
+      margin: 0 0 0.55rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      color: var(--cyan);
+      font-weight: 600;
     }
 
     .lede {
       margin: 0;
       color: var(--ink-soft);
       font-size: 1.02rem;
-      max-width: 42ch;
+      max-width: 58ch;
     }
 
     .lede strong { color: var(--ink); font-weight: 600; }
 
-    .verbs {
-      margin: 0 0 0.45rem;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.02em;
-      color: var(--steel);
-      font-weight: 600;
-      max-width: 46ch;
-    }
-
-    .stack {
-      display: grid;
-      gap: 0.45rem;
-    }
-
-    .layer {
-      display: grid;
-      grid-template-columns: 4.6rem 1fr;
-      gap: 0.75rem;
-      align-items: center;
-      padding: 0.55rem 0.7rem;
-      border-radius: 8px;
-      border: 1px solid transparent;
-      color: #fff;
-      animation: rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
-    .layer:nth-child(1) { background: var(--layer-rag); animation-delay: 40ms; }
-    .layer:nth-child(2) { background: var(--layer-agent); animation-delay: 110ms; }
-    .layer:nth-child(3) { background: var(--layer-mcp); animation-delay: 180ms; }
-    .layer:nth-child(4) { background: var(--layer-a2a); animation-delay: 250ms; }
-
-    .layer code {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      opacity: 0.92;
-    }
-
-    .layer span {
-      font-size: 0.84rem;
-      line-height: 1.3;
-      font-weight: 500;
-    }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .layer { animation: none; }
-    }
-
-    section {
-      padding: 1.1rem 1.35rem 1.2rem;
-      border-bottom: 1px solid var(--line);
-    }
+    section { padding: 1.15rem 1.35rem 1.25rem; }
 
     h2 {
-      margin: 0 0 0.75rem;
+      margin: 0 0 0.35rem;
       font-family: var(--font-mono);
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--steel);
+      color: var(--cyan);
       font-weight: 600;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
+    .explain {
+      margin: 0 0 1rem;
+      color: var(--ink-soft);
+      max-width: 68ch;
     }
 
-    th, td {
+    .pipe-board { position: relative; padding-top: 1.35rem; }
+
+    .flow {
+      position: absolute;
+      left: 6%;
+      right: 6%;
+      top: 0.35rem;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(143, 223, 255, 0.55), rgba(230, 161, 90, 0.85) 62%, rgba(143, 223, 255, 0.45), transparent);
+      overflow: visible;
+    }
+
+    .mote {
+      position: absolute;
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e8f7ff;
+      box-shadow: 0 0 10px #8fdfff;
+      animation: travel 8.5s linear infinite;
+    }
+
+    .mote.b { animation-delay: -3.1s; width: 4px; height: 4px; top: -1px; opacity: 0.75; }
+    .mote.c { animation-delay: -5.4s; }
+    .mote.amber {
+      background: #ffd7a8;
+      box-shadow: 0 0 10px var(--amber);
+      animation-name: hold;
+      animation-duration: 8.5s;
+    }
+
+    @keyframes travel {
+      0% { left: 0; opacity: 0; }
+      8% { opacity: 1; }
+      92% { opacity: 1; }
+      100% { left: 100%; opacity: 0; }
+    }
+
+    @keyframes hold {
+      0% { left: 0; opacity: 0; }
+      10% { opacity: 1; }
+      54% { left: 61%; opacity: 1; }
+      72% { left: 61%; opacity: 1; }
+      84% { left: 61%; opacity: 0; }
+      100% { left: 61%; opacity: 0; }
+    }
+
+    .chambers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.7rem;
+    }
+
+    .chamber {
+      appearance: none;
       text-align: left;
-      vertical-align: top;
-      padding: 0.55rem 0.45rem;
-      border-bottom: 1px solid #e2e8ef;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      background: rgba(6, 14, 26, 0.72);
+      border: 1px solid rgba(122, 176, 214, 0.28);
+      border-radius: 14px;
+      padding: 0.8rem 0.8rem 0.85rem;
+      min-height: 12.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
     }
 
-    th {
+    .chamber.is-on {
+      border-color: rgba(143, 223, 255, 0.85);
+      box-shadow: 0 0 0 1px rgba(143, 223, 255, 0.2), 0 0 24px rgba(40, 140, 200, 0.18);
+      background: linear-gradient(180deg, rgba(16, 36, 58, 0.92), rgba(8, 16, 28, 0.92));
+    }
+
+    .idx {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .chamber strong {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .chamber .job {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+    }
+
+    .art {
+      height: 3.6rem;
+      margin-top: 0.25rem;
+      position: relative;
+    }
+
+    .qmark {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      height: 100%;
+    }
+
+    .qmark b {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--cyan);
+      font-weight: 650;
+    }
+
+    .qmark span { display: grid; gap: 0.32rem; flex: 1; }
+    .qmark i {
+      display: block;
+      height: 0.28rem;
+      border-radius: 99px;
+      background: rgba(143, 223, 255, 0.85);
+    }
+    .qmark i:last-child { width: 62%; background: rgba(143, 223, 255, 0.4); }
+
+    .units {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.35rem;
+      height: 100%;
+    }
+
+    .units i {
+      width: 0.85rem;
+      height: 0.85rem;
+      border-radius: 3px;
+      border: 1.5px solid rgba(143, 223, 255, 0.45);
+    }
+
+    .units i.on {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      height: 1.7rem;
+    }
+
+    .units em {
+      margin-left: 0.25rem;
+      font-style: normal;
       font-family: var(--font-mono);
       font-size: 0.68rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 500;
-      padding-top: 0;
+      color: var(--cyan);
     }
 
-    tr:last-child td { border-bottom: none; }
-
-    table.decisions td.problem { color: var(--ink); font-weight: 500; width: 32%; }
-    table.decisions td.reach { color: var(--ink-soft); width: 26%; }
-    table.decisions td.example {
-      color: var(--ink-soft);
-      font-size: 0.84rem;
-      width: 42%;
+    .disagree {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+      height: 100%;
     }
-    td.reach b {
-      color: var(--signal);
-      font-weight: 650;
+
+    .disagree b {
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      letter-spacing: 0.02em;
+      font-weight: 600;
+      padding: 0.28rem 0.4rem;
+      border-radius: 6px;
+      border: 1px solid rgba(143, 223, 255, 0.45);
+      color: var(--stage-ink);
     }
 
-    a.use-link {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(15, 118, 110, 0.35);
-      transition: border-color 140ms ease, color 140ms ease;
+    .disagree b.off {
+      border-color: rgba(230, 161, 90, 0.8);
+      color: #ffd7a8;
     }
 
-    a.use-link:hover,
-    a.use-link:focus-visible {
-      color: var(--steel-deep);
-      border-bottom-color: var(--steel);
-      outline: none;
+    .seal {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffd7a8;
+      border: 1px dashed rgba(230, 161, 90, 0.85);
+      border-radius: 999px;
+      padding: 0.28rem 0.45rem;
+      font-weight: 600;
     }
 
-    a.use-link:focus-visible {
-      box-shadow: 0 0 0 3px rgba(36, 90, 122, 0.25);
-      border-radius: 2px;
+    .score {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.35rem;
+      height: 100%;
+      border-bottom: 1px solid rgba(143, 223, 255, 0.35);
     }
 
-    .pick a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(36, 90, 122, 0.3);
+    .score i {
+      width: 0.7rem;
+      border-radius: 3px 3px 0 0;
+      background: rgba(143, 223, 255, 0.45);
     }
 
-    .pick a:hover,
-    .pick a:focus-visible {
-      border-bottom-color: var(--steel);
-      outline: none;
+    .score i:nth-child(1) { height: 1.1rem; }
+    .score i:nth-child(2) { height: 2.3rem; background: var(--cyan); }
+    .score i:nth-child(3) { height: 1.5rem; }
+
+    .fail {
+      margin: auto 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
     }
 
-    .tri {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0;
-      border-bottom: 1px solid var(--line);
+    .fail b {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 600;
+      margin-right: 0.3rem;
     }
 
-    .tri > section {
-      border-bottom: none;
-      border-right: 1px solid var(--line);
-    }
+    .beats { margin-top: 0.85rem; }
 
-    .tri > section:last-child { border-right: none; }
-
-    .gates {
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .gate {
-      padding: 0.55rem 0.65rem;
+    .beat {
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      padding: 0.9rem 1rem 1rem;
+      background: rgba(6, 12, 22, 0.45);
     }
 
-    .gate strong {
-      display: block;
-      font-size: 0.86rem;
+    html.js .beat { display: none; }
+    html.js .beat.is-on { display: block; }
+
+    .beat-kicker {
+      margin: 0 0 0.35rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .beat-line {
+      margin: 0 0 0.75rem;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      line-height: 1.3;
+      max-width: 42ch;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem 1rem;
+      margin: 0;
+    }
+
+    .facts div { min-width: 0; }
+
+    .facts dt {
+      font-family: var(--font-mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
       margin-bottom: 0.2rem;
     }
 
-    .gate span {
-      font-size: 0.8rem;
-      color: var(--ink-soft);
-    }
-
-    .behavior {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .panel {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 0.85rem 0.9rem;
-    }
-
-    .panel h3 {
-      margin: 0 0 0.35rem;
-      font-size: 0.98rem;
-      font-weight: 650;
-    }
-
-    .panel p {
-      margin: 0 0 0.55rem;
+    .facts dd {
+      margin: 0;
       color: var(--ink-soft);
       font-size: 0.88rem;
     }
 
-    .panel ul {
-      margin: 0;
+    .disclaimer {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .lineage {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.45rem;
+      margin: 1rem 0 0;
       padding: 0;
       list-style: none;
-      display: grid;
-      gap: 0.35rem;
-    }
-
-    .panel li {
-      position: relative;
-      padding-left: 0.85rem;
-      font-size: 0.84rem;
-      color: var(--ink);
-    }
-
-    .panel li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 0.35rem;
-      height: 0.35rem;
-      border-radius: 50%;
-      background: var(--steel);
-    }
-
-    .tag {
-      display: inline-block;
       font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.05em;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 0.18rem 0.4rem;
-      border-radius: 4px;
-      margin-bottom: 0.4rem;
+      color: var(--stage-ink);
       font-weight: 600;
     }
 
-    .tag.rules { background: #e8eef4; color: var(--steel-deep); }
-    .tag.skills { background: var(--signal-soft); color: #115e59; }
-
-    .aside-stack {
-      display: flex;
-      flex-direction: column;
+    .lineage li { display: flex; align-items: center; gap: 0.45rem; }
+    .lineage li:not(:last-child)::after {
+      content: "→";
+      color: var(--cyan);
+      font-weight: 500;
     }
 
-    .picker {
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .pick {
-      display: grid;
-      grid-template-columns: 7.5rem 1fr;
-      gap: 0.65rem;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid #e2e8ef;
-    }
-
-    .pick:last-child { border-bottom: none; }
-
-    .pick strong {
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      letter-spacing: 0.02em;
-      color: var(--steel-deep);
-      font-weight: 600;
-    }
-
-    .pick span {
+    .order {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
       font-size: 0.84rem;
-      color: var(--ink-soft);
+      max-width: 78ch;
     }
 
-    .ladder {
-      display: grid;
-      gap: 0.35rem;
-      counter-reset: step;
-    }
-
-    .ladder li {
+    .principles {
       list-style: none;
-      counter-increment: step;
+      margin: 0;
+      padding: 0;
       display: grid;
-      grid-template-columns: 1.6rem 1fr;
-      gap: 0.55rem;
-      align-items: start;
-      font-size: 0.86rem;
-      padding: 0.2rem 0;
+      gap: 0.65rem;
     }
 
-    .ladder li::before {
-      content: counter(step);
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--steel);
-      background: #e8eef4;
-      border-radius: 4px;
-      width: 1.45rem;
-      height: 1.45rem;
+    .principles li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(6, 12, 22, 0.35);
+    }
+
+    .mark {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 8px;
       display: grid;
       place-items: center;
-      margin-top: 0.05rem;
+      background: rgba(143, 223, 255, 0.1);
+      color: var(--cyan);
     }
 
-    .antis {
-      background: linear-gradient(180deg, #fcfaf8, #f8f1eb);
+    .mark svg {
+      width: 1.05rem;
+      height: 1.05rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .foundation {
-      padding: 0.85rem 1.35rem 1rem;
-      border-bottom: 1px solid var(--line);
-      background: #f3f6f9;
+    .principles strong { font-weight: 650; }
+    .principles li span.copy { color: var(--ink-soft); }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-top: 0.7rem;
     }
+
+    .pair div {
+      padding: 0.75rem 0.85rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .pair strong {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 0.3rem;
+    }
+
+    .pair p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
+
+    .kill {
+      margin: 0.8rem 0 0;
+      color: var(--ink-soft);
+      max-width: 70ch;
+    }
+
+    .source-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 0.55rem;
+    }
+
+    .source-row a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.7rem 0.75rem;
+      background: rgba(6, 12, 22, 0.35);
+      min-height: 5.4rem;
+    }
+
+    .source-row a:hover { border-color: var(--cyan); }
+
+    .source-row a b { display: block; font-weight: 650; margin-bottom: 0.25rem; }
+    .source-row a span { display: block; color: var(--ink-soft); font-size: 0.82rem; }
+
+    .pointer {
+      margin: 0.8rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      max-width: 70ch;
+    }
+
+    .pointer a { color: var(--cyan); }
+
+    .foundation { border-top: 1px solid var(--line); }
 
     .found-row {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0.65rem 0.85rem;
+      gap: 0.7rem 0.85rem;
     }
 
     .found strong {
@@ -476,53 +602,18 @@
       font-size: 0.68rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--steel);
+      color: var(--cyan);
       font-weight: 600;
       margin-bottom: 0.2rem;
     }
 
-    .found span {
-      font-size: 0.78rem;
-      color: var(--ink-soft);
-      line-height: 1.3;
-    }
-
-    .anti-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.45rem 1rem;
-    }
-
-    .anti-list li {
-      font-size: 0.86rem;
-      color: var(--ink);
-      padding-left: 0.9rem;
-      position: relative;
-    }
-
-    .anti-list li::before {
-      content: "\00D7";
-      position: absolute;
-      left: 0;
-      color: var(--warn);
-      font-weight: 700;
-    }
-
-    .note {
-      margin: 0.85rem 0 0;
-      font-size: 0.84rem;
-      color: var(--ink-soft);
-      max-width: 70ch;
-    }
+    .found span { font-size: 0.82rem; color: var(--ink-soft); }
 
     footer.meta {
       padding: 0.95rem 1.35rem 1.15rem;
-      background: #f3f6f9;
+      border-top: 1px solid var(--line);
       display: grid;
-      gap: 0.55rem;
+      gap: 0.45rem;
     }
 
     .version-row {
@@ -536,15 +627,11 @@
     .version {
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      color: var(--steel-deep);
+      color: var(--stage-ink);
       font-weight: 500;
     }
 
-    .changed {
-      margin: 0;
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-    }
+    .changed { margin: 0; font-size: 0.82rem; color: var(--ink-soft); }
 
     .changed b {
       font-family: var(--font-mono);
@@ -565,65 +652,71 @@
       color: var(--muted);
     }
 
-    .credit a {
-      color: var(--steel);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
+    .credit a { color: var(--cyan); text-decoration: none; font-weight: 500; }
     .credit a:hover { text-decoration: underline; }
 
-    .share-banner {
-      display: none;
+    .sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @media (max-width: 900px) {
-      header.hero,
-      .tri,
-      .behavior,
-      .anti-list {
-        grid-template-columns: 1fr;
-      }
-      .tri > section { border-right: none; border-bottom: 1px solid var(--line); }
-      .tri > section:last-child { border-bottom: none; }
-      .pick { grid-template-columns: 1fr; gap: 0.2rem; }
-      h1 { max-width: none; }
+      .chambers, .facts, .pair { grid-template-columns: 1fr 1fr; }
+      .source-row { grid-template-columns: 1fr 1fr; }
       .found-row { grid-template-columns: 1fr 1fr; }
-      table.decisions td.problem,
-      table.decisions td.reach,
-      table.decisions td.example { width: auto; }
+      .flow { display: none; }
+      h1, .hook { max-width: none; }
+    }
+
+    @media (max-width: 640px) {
+      .sheet { width: min(1100px, calc(100% - 0.75rem)); }
+      .chambers, .facts, .pair, .source-row, .found-row { grid-template-columns: 1fr; }
+      .chamber { min-height: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mote { animation: none; opacity: 0; }
+      html { scroll-behavior: auto; }
     }
 
     @media print {
-      @page {
-        size: A4 landscape;
-        margin: 8mm;
-      }
-
-      body {
-        background: #fff;
-        font-size: 10.5pt;
-      }
-
+      @page { size: A4 landscape; margin: 8mm; }
+      body { background: #fff; color: #18212b; font-size: 10pt; }
       .sheet {
         width: 100%;
         margin: 0;
         border: none;
         border-radius: 0;
         box-shadow: none;
+        background: #fff;
+        color: #18212b;
       }
-
-      .channels,
-      .share-banner { display: none !important; }
-
-      .topbar { padding: 0.4rem 0 0.55rem; background: none; }
-      header.hero { padding: 0.55rem 0 0.7rem; gap: 0.85rem; }
-      section { padding: 0.55rem 0 0.65rem; }
-      footer.meta { padding: 0.45rem 0 0; background: none; }
-      .foundation { padding: 0.45rem 0; background: none; }
-      .layer { animation: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .panel, .antis, .foundation { break-inside: avoid; }
-      a { color: inherit; text-decoration: none; border-bottom: none !important; }
+      h1, .hook, .principles strong, .beat-line, .chamber strong, .lede strong { color: #18212b; }
+      .lede, .explain, .job, .facts dd, .disclaimer, .order, .kill, .pair p,
+      .principles li span.copy, .found span, .source-row span, .changed, .credit, .pointer, .fail { color: #3a4654; }
+      h2, .eyebrow, .verbs, .idx, .beat-kicker, .found strong, .pair strong, .lineage, .version,
+      .qmark b, .units em, .fail b, .seal, .disagree b, .disagree b.off { color: #1a4158; }
+      .chamber, .chamber.is-on, .beat, .principles li, .pair div, .source-row a {
+        background: #fff;
+        border-color: #c9d2dc;
+        box-shadow: none;
+        color: #18212b;
+      }
+      .seal, .disagree b, .disagree b.off { border-color: #1a4158; }
+      .channels, .flow { display: none !important; }
+      html.js .beat { display: block !important; }
+      .beats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .topbar, header.hero, section, footer.meta { padding-left: 0; padding-right: 0; }
+      .pipe-board, .principles li, .foundation { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
     }
   </style>
 </head>
@@ -631,7 +724,7 @@
   <article class="sheet" id="field-card">
     <div class="topbar">
       <div class="eyebrow">Field card · Data &amp; analytics</div>
-      <div class="channels no-print">
+      <div class="channels">
         <button type="button" onclick="window.print()">Print / PDF</button>
         <button type="button" id="copy-link">Copy link</button>
         <a class="btn" href="https://alextouvras.com" rel="noopener">alextouvras.com</a>
@@ -639,155 +732,165 @@
     </div>
 
     <header class="hero">
-      <div>
-        <div class="eyebrow">When the number is real enough</div>
-        <h1>Analytics is a stack, not a dashboard</h1>
-        <p class="verbs">Ask → name → define → consume</p>
-        <p class="lede">
-          Question, grain, truth layer, and consume path are <strong>layers</strong>.
-          Tools are lanes. Most teams need fewer products than the roadmap implies — add complexity only when the decision actually requires it.
-        </p>
-      </div>
-      <div class="stack" aria-label="Four-layer stack">
-        <div class="layer"><code>ASK</code><span>Question — what decision does this number serve?</span></div>
-        <div class="layer"><code>GRAIN</code><span>Unit — customer, account, day, claim… named once</span></div>
-        <div class="layer"><code>TRUTH</code><span>Definitions — where the number becomes official</span></div>
-        <div class="layer"><code>USE</code><span>Consume — notebook, model, scorecard, or API</span></div>
-      </div>
+      <div class="eyebrow">When the number is real enough</div>
+      <h1>Analytics is a stack, not a dashboard</h1>
+      <p class="hook">Can we trust this number enough to act on it?</p>
+      <p class="verbs">Ask → name → define → consume</p>
+      <p class="lede">
+        Question, grain, truth, and consume are <strong>layers</strong>. Tools are lanes.
+        Add a product only when the decision actually requires it.
+      </p>
     </header>
 
-    <section>
-      <h2>Problem → use → example</h2>
-      <table class="decisions">
-        <thead>
-          <tr>
-            <th>If the real problem is…</th>
-            <th>Use</th>
-            <th>Example case</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="problem">Nobody agrees what “active customer” means</td>
-            <td class="reach"><a class="use-link" href="https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl" target="_blank" rel="noopener noreferrer" title="dbt Semantic Layer overview"><b>Metrics / semantic layer</b></a></td>
-            <td class="example">One definition of active_30d owned upstream; every BI tool and notebook reads it — no local COUNT DISTINCT remixes</td>
-          </tr>
-          <tr>
-            <td class="problem">Raw dumps keep breaking Monday reports</td>
-            <td class="reach"><a class="use-link" href="https://docs.getdbt.com/docs/build/building-models" target="_blank" rel="noopener noreferrer" title="dbt: building models"><b>Curated / gold tables</b></a></td>
-            <td class="example">SQL or Python builds a typed fact table with tests; dashboards read gold, not the landing zone</td>
-          </tr>
-          <tr>
-            <td class="problem">Shape of the question is still fuzzy</td>
-            <td class="reach"><a class="use-link" href="https://jupyter.org/" target="_blank" rel="noopener noreferrer" title="Project Jupyter"><b>Notebook + SQL</b></a></td>
-            <td class="example">Spike in churn last week — slice in a notebook first; graduate joins and metrics only after the grain holds</td>
-          </tr>
-          <tr>
-            <td class="problem">Leadership needs a cold-open decision pack</td>
-            <td class="reach"><a class="use-link" href="https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards" target="_blank" rel="noopener noreferrer" title="Power BI dashboards overview"><b>Scorecard / KPI pack</b></a></td>
-            <td class="example">Five measures, one page, named owner; exploration dashboards stay off this path</td>
-          </tr>
-          <tr>
-            <td class="problem">Self-serve without rewriting business rules in every report</td>
-            <td class="reach"><a class="use-link" href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-relationships-understand" target="_blank" rel="noopener noreferrer" title="Power BI: relationships and models"><b>Governed semantic model</b></a></td>
-            <td class="example">Star schema + measures in the model; pages compose, they don’t redefine PD or ECL</td>
-          </tr>
-          <tr>
-            <td class="problem">Heavy joins or volume that local SQL can’t finish</td>
-            <td class="reach"><a class="use-link" href="https://docs.databricks.com/en/lakehouse/index.html" target="_blank" rel="noopener noreferrer" title="Databricks lakehouse"><b>Warehouse / lakehouse</b></a></td>
-            <td class="example">Multi-year transaction history for RFM; compute close to storage, publish a narrow gold table out</td>
-          </tr>
-          <tr>
-            <td class="problem">Fast local analysis that still needs to share</td>
-            <td class="reach"><a class="use-link" href="https://duckdb.org/docs/" target="_blank" rel="noopener noreferrer" title="DuckDB docs"><b>DuckDB / MotherDuck</b></a></td>
-            <td class="example">Parquet on disk for a credit cohort study; push the reproducible query, not a mystery workbook</td>
-          </tr>
-          <tr>
-            <td class="problem">Regulated / risk number must be auditable</td>
-            <td class="reach"><a class="use-link" href="https://learn.microsoft.com/en-us/azure/databricks/delta/history" target="_blank" rel="noopener noreferrer" title="Delta Lake time travel (versioned tables)"><b>Versioned inputs + assumptions</b></a></td>
-            <td class="example">PD scorecard run: freeze feature store cut, document exclusions, store the model ID next to the ECL output</td>
-          </tr>
-          <tr>
-            <td class="problem">One-off exec ask by Friday</td>
-            <td class="reach"><a class="use-link" href="https://support.microsoft.com/en-us/excel" target="_blank" rel="noopener noreferrer" title="Excel support"><b>Spreadsheet (then graduate)</b></a></td>
-            <td class="example">Board slide number from a controlled extract; if it recurs twice, promote grain + definition to gold</td>
-          </tr>
-          <tr>
-            <td class="problem">Don’t know if the number moved for the right reason</td>
-            <td class="reach"><a class="use-link" href="https://openlineage.io/" target="_blank" rel="noopener noreferrer" title="OpenLineage"><b>Reconciliation / lineage</b></a></td>
-            <td class="example">Compare source counts vs gold vs semantic measure; block publish when the gap has no named cause</td>
-          </tr>
-          <tr>
-            <td class="problem">Ops needs near-now status, not last night’s batch</td>
-            <td class="reach"><a class="use-link" href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/stream-processing" target="_blank" rel="noopener noreferrer" title="Stream processing technology choices"><b>Near-real-time path</b></a></td>
-            <td class="example">Queue depth and fail rate on a 5-minute lag; keep strategic KPIs on the batch truth layer</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">Default build order: name the question and grain → curated tables with tests → shared definitions → consume surface → lineage/reconcile before you scale tools.</p>
+    <section class="pipe" id="stack">
+      <h2>How a number becomes trusted</h2>
+      <p class="explain">One illustrative credit case walks the four layers. Select a layer. The picture is the system.</p>
+      <div class="pipe-board">
+        <div class="flow" aria-hidden="true">
+          <span class="mote"></span>
+          <span class="mote b"></span>
+          <span class="mote c"></span>
+          <span class="mote amber"></span>
+        </div>
+        <div class="chambers" role="group" aria-label="Ask, grain, truth, and use">
+          <button type="button" class="chamber is-on" data-stage="ask" aria-pressed="true">
+            <span class="idx">01 · Ask</span>
+            <strong>Question</strong>
+            <p class="job">What decision does this number serve?</p>
+            <div class="art" aria-hidden="true">
+              <span class="qmark"><b>?</b><span><i></i><i></i></span></span>
+            </div>
+            <p class="fail"><b>Fails</b> Dashboard first</p>
+          </button>
+          <button type="button" class="chamber" data-stage="grain" aria-pressed="false">
+            <span class="idx">02 · Grain</span>
+            <strong>Unit</strong>
+            <p class="job">Name the unit once. Customer, account, day, claim.</p>
+            <div class="art" aria-hidden="true">
+              <span class="units"><i></i><i class="on"></i><i></i><em>account</em></span>
+            </div>
+            <p class="fail"><b>Fails</b> Two grains, one count</p>
+          </button>
+          <button type="button" class="chamber" data-stage="truth" aria-pressed="false">
+            <span class="idx">03 · Truth</span>
+            <strong>Definition</strong>
+            <p class="job">Where the number becomes official.</p>
+            <div class="art" aria-hidden="true">
+              <span class="disagree"><b>12.4</b><b class="off">11.1</b><span class="seal">blocked</span></span>
+            </div>
+            <p class="fail"><b>Fails</b> A gap with no owner</p>
+          </button>
+          <button type="button" class="chamber" data-stage="use" aria-pressed="false">
+            <span class="idx">04 · Use</span>
+            <strong>Consume</strong>
+            <p class="job">Notebook, model, scorecard, or API.</p>
+            <div class="art" aria-hidden="true">
+              <span class="score"><i></i><i></i><i></i></span>
+            </div>
+            <p class="fail"><b>Fails</b> The page invents the measure</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="beats" id="beats">
+        <p class="sr" id="stack-desc">
+          Ask names the decision. Grain names the unit once. Truth reconciles two measures and blocks publish when the gap has no owner. Use binds a scorecard to that definition. The case is illustrative, not a claim about a real portfolio.
+        </p>
+        <article class="beat is-on" data-stage="ask">
+          <p class="beat-kicker">01 · Question</p>
+          <p class="beat-line">Which customer segments are driving the increase in expected credit losses?</p>
+          <dl class="facts">
+            <div><dt>In</dt><dd>A movement nobody has named</dd></div>
+            <div><dt>Do</dt><dd>Name the decision this number serves</dd></div>
+            <div><dt>Out</dt><dd>A question an owner can answer</dd></div>
+            <div><dt>Fails</dt><dd>The dashboard arrives before the question</dd></div>
+          </dl>
+        </article>
+        <article class="beat" data-stage="grain">
+          <p class="beat-kicker">02 · Grain</p>
+          <p class="beat-line">Account, at a reporting date, inside a named portfolio. Duplicates follow one rule.</p>
+          <dl class="facts">
+            <div><dt>In</dt><dd>Customer, account, day, or claim</dd></div>
+            <div><dt>Do</dt><dd>Write the unit once, upstream of any page</dd></div>
+            <div><dt>Out</dt><dd>A grain other systems can reuse</dd></div>
+            <div><dt>Fails</dt><dd>A local count that remixes the unit</dd></div>
+          </dl>
+        </article>
+        <article class="beat" data-stage="truth">
+          <p class="beat-kicker">03 · Truth</p>
+          <p class="beat-line">Approved PD, LGD, and EAD. Two packs disagree, so publish stays blocked until an owner names the gap.</p>
+          <dl class="facts">
+            <div><dt>In</dt><dd>Source, gold, and the semantic measure</dd></div>
+            <div><dt>Do</dt><dd>Reconcile, and stop when the gap is unexplained</dd></div>
+            <div><dt>Out</dt><dd>One official number, or a dark gap</dd></div>
+            <div><dt>Fails</dt><dd>Shipping both figures because a meeting is waiting</dd></div>
+          </dl>
+        </article>
+        <article class="beat" data-stage="use">
+          <p class="beat-kicker">04 · Decision</p>
+          <p class="beat-line">Segment drivers on one scorecard, bound to those definitions. The page does not invent ECL.</p>
+          <dl class="facts">
+            <div><dt>In</dt><dd>The official number and its owner</dd></div>
+            <div><dt>Do</dt><dd>Compose a pack a person can investigate</dd></div>
+            <div><dt>Out</dt><dd>A decision, with the lineage behind it</dd></div>
+            <div><dt>Fails</dt><dd>An exploration chart on the decision path</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="disclaimer">Illustrative scenario. Not a claim about an observed portfolio.</p>
+      <ol class="lineage" aria-label="From source to decision">
+        <li>Source</li>
+        <li>Model</li>
+        <li>Tests</li>
+        <li>Metric</li>
+        <li>Decision</li>
+      </ol>
+      <p class="order">Name the question and the grain, then curated tables with tests, then shared definitions, then the consume surface. Lineage before you add tools.</p>
     </section>
 
-    <div class="tri">
-      <section>
-        <h2>Tool picker</h2>
-        <div class="picker">
-          <div class="pick"><strong><a href="https://docs.getdbt.com/" target="_blank" rel="noopener noreferrer">dbt</a></strong><span>Versioned transforms + tests as code</span></div>
-          <div class="pick"><strong><a href="https://duckdb.org/" target="_blank" rel="noopener noreferrer">DuckDB</a> / <a href="https://motherduck.com/docs/" target="_blank" rel="noopener noreferrer">MotherDuck</a></strong><span>Local-to-cloud speed for analytics SQL</span></div>
-          <div class="pick"><strong><a href="https://docs.databricks.com/" target="_blank" rel="noopener noreferrer">Databricks</a></strong><span>Volume, lakehouse, shared compute</span></div>
-          <div class="pick"><strong><a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Python</a> / <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter</a></strong><span>Exploration, features, one-off science</span></div>
-          <div class="pick"><strong><a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank" rel="noopener noreferrer">Power BI</a> / <a href="https://cloud.google.com/looker/docs" target="_blank" rel="noopener noreferrer">Looker</a></strong><span>Governed consume + scorecards</span></div>
-          <div class="pick"><strong><a href="https://www.getdbt.com/product/semantic-layer" target="_blank" rel="noopener noreferrer">Semantic layer</a></strong><span>Shared metrics across tools</span></div>
-          <div class="pick"><strong><a href="https://openlineage.io/" target="_blank" rel="noopener noreferrer">OpenLineage</a></strong><span>Where did this number come from?</span></div>
+    <section class="judgement">
+      <h2>Where judgement stays</h2>
+      <p class="explain">Definitions travel. Reports compose. A person still stops a bad publish.</p>
+      <ol class="principles">
+        <li>
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5h8M8 9h5"/><circle cx="12" cy="16" r="3"/></svg></span>
+          <span class="copy"><strong>Define the question.</strong> A chart is not a decision. Name what someone will do with the number before a tool is in the room.</span>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="8" width="5" height="5"/><rect x="15" y="8" width="5" height="5"/><path d="M9 10.5h6"/></svg></span>
+          <span class="copy"><strong>Make the grain explicit.</strong> Account, customer, day, or claim — named once. A report may compose that unit. It may not remix it.</span>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 8h5M6 12h4"/><path d="M14 9l4 4M18 9l-4 4"/></svg></span>
+          <span class="copy"><strong>Reconcile before release.</strong> If two packs disagree and nobody owns the gap, the number stays dark.</span>
+        </li>
+      </ol>
+      <div class="pair">
+        <div>
+          <strong>Definitions · travel</strong>
+          <p>Grain, keys, and measures live upstream of any one dashboard.</p>
         </div>
-      </section>
-
-      <section>
-        <h2>Definition vs report</h2>
-        <div class="gates">
-          <div class="gate">
-            <strong>Definitions · travel</strong>
-            <span>Grain, keys, and measures that other systems can reuse. Own them upstream of any single dashboard.</span>
-          </div>
-          <div class="gate">
-            <strong>Reports · compose</strong>
-            <span>Layout and audience. A page should not invent PD, ECL, or “active” — it should bind to named definitions.</span>
-          </div>
-          <div class="gate">
-            <strong>Memory check</strong>
-            <span>ASK = decision. GRAIN = unit. TRUTH = official number. USE = how humans see it.</span>
-          </div>
+        <div>
+          <strong>Reports · compose</strong>
+          <p>A scorecard binds to named definitions. It does not invent PD, ECL, or “active”.</p>
         </div>
-      </section>
+      </div>
+      <p class="kill">If you can’t name the grain, the owner, and how to stop a bad publish, you don’t ship the number.</p>
+    </section>
 
-      <section>
-        <h2>Ladder + gates</h2>
-        <ol class="ladder">
-          <li>Named question + grain</li>
-          <li>Trusted extract / spreadsheet (time-boxed)</li>
-          <li>Curated tables + tests</li>
-          <li>Shared definitions / semantic model</li>
-          <li>Scorecard or governed self-serve</li>
-          <li>Lineage + reconcile before scale</li>
-        </ol>
-        <div class="gate" style="margin-top:0.75rem">
-          <strong>Kill switch</strong>
-          <span>If you can’t name the grain, the owner, and how to stop a bad publish, you don’t ship the number.</span>
-        </div>
-      </section>
-    </div>
-
-    <section class="antis">
-      <h2>Anti-patterns</h2>
-      <ul class="anti-list">
-        <li>Dashboard first, question never</li>
-        <li>Redefining metrics inside every report</li>
-        <li>Landing-zone tables as the semantic layer</li>
-        <li>Tool shopping before grain is named</li>
-        <li>Treating Excel as forever when it recurs</li>
-        <li>Real-time paths for strategic KPIs</li>
-        <li>Unowned “source of truth” with no tests</li>
-        <li>Publishing when reconcile gaps are unexplained</li>
-      </ul>
+    <section class="practices">
+      <h2>Named practices</h2>
+      <p class="explain">Seven lanes. The four layers still set the order. A new product name is not a new layer.</p>
+      <div class="source-row">
+        <a href="https://docs.getdbt.com/" target="_blank" rel="noopener noreferrer"><b>dbt</b><span>Versioned transforms and tests as code</span></a>
+        <a href="https://duckdb.org/docs/" target="_blank" rel="noopener noreferrer"><b>DuckDB</b><span>Local analytics SQL that can still be shared</span></a>
+        <a href="https://docs.databricks.com/" target="_blank" rel="noopener noreferrer"><b>Databricks</b><span>Volume, lakehouse, shared compute</span></a>
+        <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer"><b>Python / Jupyter</b><span>Exploration until the grain holds</span></a>
+        <a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank" rel="noopener noreferrer"><b>Power BI</b><span>Governed consume and scorecards</span></a>
+        <a href="https://www.getdbt.com/product/semantic-layer" target="_blank" rel="noopener noreferrer"><b>Semantic layer</b><span>Shared metrics across tools</span></a>
+        <a href="https://openlineage.io/" target="_blank" rel="noopener noreferrer"><b>OpenLineage</b><span>Where this number came from</span></a>
+      </div>
+      <p class="pointer">The same lanes, when the constraint shifts: <a href="https://motherduck.com/docs/" target="_blank" rel="noopener noreferrer">MotherDuck</a> shares a DuckDB query, and <a href="https://cloud.google.com/looker/docs" target="_blank" rel="noopener noreferrer">Looker</a> governs consume the way Power BI does. When each trial is a slow PD or ECL backtest, that search lives on the <a href="https://alextouvras.com/bayes-field-card/index.html">Bayesian optimisation</a> card. Grid the cheap notebook. Model the expensive pack.</p>
     </section>
 
     <section class="foundation" aria-label="Always-on foundation">
@@ -803,30 +906,60 @@
 
     <footer class="meta">
       <div class="version-row">
-        <div class="version" id="version-stamp">v2026.36 · Reviewed 4 Sep 2026 · Next: week of 11 Sep</div>
+        <div class="version" id="version-stamp">v2026.42 · Reviewed 13 Oct 2026 · Next: November 2026</div>
         <div class="credit">
           <span>Alex Touvras</span>
           <a href="https://alextouvras.com">alextouvras.com</a>
           <span>Delivery · Data · AI automation</span>
         </div>
       </div>
-      <p class="changed"><b>Changed</b> Weekly discovery ready for Cursor Automation</p>
+      <p class="changed"><b>Changed</b> The stack is the picture. One credit case walks ask, grain, truth, and use, and a disagreement blocks publish.</p>
     </footer>
   </article>
 
   <script>
     (function () {
-      var btn = document.getElementById("copy-link");
-      if (!btn) return;
-      btn.addEventListener("click", async function () {
-        var url = window.location.href;
-        try {
-          await navigator.clipboard.writeText(url);
-          btn.textContent = "Copied";
-          setTimeout(function () { btn.textContent = "Copy link"; }, 1400);
-        } catch (e) {
-          window.prompt("Copy this URL:", url);
-        }
+      document.documentElement.classList.add("js");
+
+      var copy = document.getElementById("copy-link");
+      if (copy) {
+        copy.addEventListener("click", async function () {
+          var url = window.location.href;
+          try {
+            await navigator.clipboard.writeText(url);
+            copy.textContent = "Copied";
+            setTimeout(function () { copy.textContent = "Copy link"; }, 1400);
+          } catch (e) {
+            window.prompt("Copy this URL:", url);
+          }
+        });
+      }
+
+      var buttons = Array.prototype.slice.call(document.querySelectorAll(".chamber"));
+      var beats = Array.prototype.slice.call(document.querySelectorAll(".beat"));
+
+      function select(id) {
+        buttons.forEach(function (btn) {
+          var on = btn.getAttribute("data-stage") === id;
+          btn.classList.toggle("is-on", on);
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        beats.forEach(function (beat) {
+          beat.classList.toggle("is-on", beat.getAttribute("data-stage") === id);
+        });
+      }
+
+      buttons.forEach(function (btn, index) {
+        btn.addEventListener("click", function () { select(btn.getAttribute("data-stage")); });
+        btn.addEventListener("keydown", function (event) {
+          if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+          event.preventDefault();
+          var next = event.key === "ArrowRight" ? index + 1 : index - 1;
+          if (next < 0) next = buttons.length - 1;
+          if (next >= buttons.length) next = 0;
+          buttons[next].focus();
+          select(buttons[next].getAttribute("data-stage"));
+        });
       });
     })();
   </script>

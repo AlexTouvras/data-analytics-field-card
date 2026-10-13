@@ -8,7 +8,7 @@ Follow the shared rules in Orbit `docs/architecture/field-card-review.md` if you
 
 ## Spine (Data Analytics)
 
-ASK → GRAIN → TRUTH → USE. Picker ≤7 by constraint. Not a Fabric / Power BI brochure.
+ASK → GRAIN → TRUTH → USE is the picture: four chambers, a reconciliation gate, and a kill switch. Named practices ≤7 by constraint. Not a Fabric / Power BI brochure. Do not require the old problem table.
 
 ## Apply
 
