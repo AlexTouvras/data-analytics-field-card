@@ -16,6 +16,7 @@ This is **not** a Power BI / Fabric product card. The stable spine is:
 - Verb line under the H1 (`Ask → name → define → consume`) — do not drop
 - The question the card answers: can we trust this number enough to act on it?
 - One illustrative credit case walking those four layers. The reconciliation diagram uses teaching figures, not a portfolio result. A disagreement blocks publish.
+- The ownership cycle: bottleneck, departure, two numbers, then a project that deletes reports. The exit is to build the metric once. An assistant that drafts it does not own it.
 - **Always on** beside the gate (Security, Governance, Observability, Evals, Human Approve) — not picker items
 - Architecture, tool groups, anti-patterns, and the maturity ladder
 - Named practices grouped by constraint. A new brand is an example inside a group, not a new layer.
