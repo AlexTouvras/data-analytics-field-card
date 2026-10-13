@@ -31,6 +31,7 @@ Do **not** depend on ProjectBrain MCP.
 1. `npm run discover` → decide update vs no-change
 2. PR with `## Summary` + `## Card preview` if updating
 3. Stop. Do not notify Slack. Do not merge. Friday 18:00 review publishes.
+4. After that merge, `Sync site` runs on the push to `main` and copies the card onto alextouvras.com. It skips the Apply-review commit itself, because that commit already copied the card.
 
 ## IDE coexistence
 

@@ -19,3 +19,5 @@ Accent is ice blue and green on a near-black navy sheet. Amber marks the disagre
 Weekly judgment is described in `.state/AUTOMATION_CONTRACT.md` and `docs/weekly-refresh-prompt.md`. Discovery reads tool names out of `index.html`. The version stamp element id is `version-stamp`. The Changed line is `<p class="changed"><b>Changed</b> …`.
 
 Primary verify when HTML or URLs change: `node scripts/check-links.mjs` exits 0.
+
+A push to `main` that changes `index.html` or `assets/` runs `.github/workflows/sync-site.yml`. That asks Orbit to show this repo. GitHub Pages deploys from the same push. Apply review remains the monthly merge.
