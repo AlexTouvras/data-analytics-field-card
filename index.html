@@ -316,6 +316,38 @@
     .aside span { color: var(--muted); font-size: 0.78rem; }
     .fine { margin: 0.55rem 0 0; color: var(--muted); font-size: 0.78rem; }
 
+    .cycle {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.9fr) repeat(3, 1fr);
+      gap: 0.7rem;
+      align-items: stretch;
+    }
+    .cycle article, .cycle .lead {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.8rem 0.85rem;
+      background: rgba(7, 18, 32, 0.55);
+    }
+    .cycle h3 { margin: 0.15rem 0 0.35rem; font-size: 1.02rem; letter-spacing: -0.02em; }
+    .cycle p { margin: 0; color: var(--soft); font-size: 0.88rem; }
+    .cycle .lead p { margin-top: 0.45rem; }
+    .exit {
+      margin: 0.7rem 0 0;
+      padding: 0.75rem 0.9rem;
+      border-radius: 12px;
+      border: 1px solid rgba(62, 230, 168, 0.4);
+      background: rgba(16, 48, 40, 0.45);
+      color: var(--ink);
+    }
+    .exit b {
+      font-family: var(--mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      color: var(--green);
+      margin-right: 0.4rem;
+    }
+
     .case { grid-template-columns: minmax(220px, 0.72fr) 1.5fr; align-items: start; }
     .prompt {
       margin: 0.45rem 0 0.7rem;
@@ -377,19 +409,30 @@
       border-radius: 12px;
       padding: 0.8rem 0.8rem 0.9rem;
       background: rgba(7, 18, 32, 0.55);
+      display: flex;
+      flex-direction: column;
     }
     .panel h2 { font-size: 1.15rem; margin-bottom: 0.65rem; }
-    .plates { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+    .plates {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      display: grid;
+      grid-template-rows: repeat(4, minmax(3.15rem, 1fr));
+      gap: 0.4rem;
+    }
     .plates li {
       border: 1px solid rgba(90, 190, 230, 0.35);
       border-radius: 8px;
       padding: 0.45rem 0.6rem;
       background: linear-gradient(180deg, rgba(40, 120, 180, 0.28), rgba(10, 30, 55, 0.4));
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .plates li { width: 100%; margin-inline: auto; }
-    .plates li:nth-child(2) { width: 94%; }
-    .plates li:nth-child(3) { width: 88%; }
-    .plates li:nth-child(4) { width: 82%; }
     .plates b { display: block; font-family: var(--font); letter-spacing: 0; text-transform: none; font-size: 0.84rem; }
     .plates span, .tools span, .traps span, .ladder span { color: var(--muted); font-size: 0.75rem; }
     .tools, .traps, .ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
@@ -451,7 +494,7 @@
 
     @media (max-width: 980px) {
       .hero, .split, .trust, .case, .quad, .stack, .steps, .gate { grid-template-columns: 1fr 1fr; }
-      .trust, .case, .quad { grid-template-columns: 1fr; }
+      .trust, .case, .quad, .cycle { grid-template-columns: 1fr 1fr; }
       .gate { grid-template-columns: 1fr 1fr; }
       .flow { display: none; }
       .checks, .result { grid-column: 1 / -1; }
@@ -461,14 +504,13 @@
     }
     @media (max-width: 680px) {
       .sheet { width: min(1180px, calc(100% - 0.7rem)); padding: 0.9rem 0.75rem; }
-      .topbar, .hero, .split, .stack, .steps, .gate { grid-template-columns: 1fr; }
+      .topbar, .hero, .split, .stack, .steps, .gate, .cycle { grid-template-columns: 1fr; }
       .stage::after { display: none; }
       .hero { min-height: 0; display: grid; }
       .hero-photo { position: relative; height: 220px; grid-row: 2; }
       .hero::after { display: none; }
       .vert { display: none; }
       .card { min-height: 0; }
-      .plates li { margin-inline: 0 !important; }
     }
     @media (prefers-reduced-motion: reduce) {
       .hero-art animateMotion { display: none; }
@@ -484,7 +526,9 @@
       .hero::after { display: none; }
       h1, h2, h3, .lede, .note, .card p, .fail, .aside span, .steps p, .plates span, .tools span, .traps span, .ladder span, .kill, .pointer, .changed, .credit, .prompt { color: #243140; }
       .eyebrow, .kicker, .idx, .verbs, .chips, .fail b, .pill, .aside b, .tools a, .pointer a, .credit a { color: #1a4158; }
-      .card, .panel, .report, .checks, .result, .prompt, .pill { background: #fff; border-color: #c5d0dc; box-shadow: none; color: #18212b; }
+      .card, .panel, .report, .checks, .result, .prompt, .pill, .cycle article, .cycle .lead, .exit { background: #fff; border-color: #c5d0dc; box-shadow: none; color: #18212b; }
+      .cycle p, .exit { color: #243140; }
+      .exit b { color: #1a4158; }
       .report strong, .result strong, .published { color: #1a4158; }
       .stage.is-on .card { box-shadow: none; }
       .band, footer.meta { border-color: #d5dee6; }
@@ -573,7 +617,7 @@
         <div>
           <p class="kicker">Trust through</p>
           <h2>Quality, governance and reconciliation</h2>
-          <p class="note">When reports disagree, the system detects, investigates and resolves — before the number reaches the decision. Definitions travel. Reports compose.</p>
+          <p class="note">Two reports, one question. That gap is the cycle showing up. The gate holds publish until someone owns the difference. Definitions travel. Reports compose.</p>
         </div>
         <div class="gate" aria-label="Two reports meet a reconciliation gate">
           <div>
@@ -608,6 +652,33 @@
         </ul>
       </div>
       <p class="fine">The 4.8%, 6.2% and 5.1% figures are a picture of a disagreement, not a calculated portfolio result.</p>
+    </section>
+
+    <section class="band" id="owner">
+      <div class="cycle">
+        <div class="lead">
+          <p class="kicker">The cycle</p>
+          <h2>Who owns the number</h2>
+          <p>A central team governs the reports. The business treats that as a bottleneck. The authors leave, two reports disagree, and a project deletes the pile. Give it a few years. The loop starts again.</p>
+        </div>
+        <article>
+          <p class="kicker">01</p>
+          <h3>Bottleneck</h3>
+          <p>Waiting on the data team feels slower than hiring an analyst, or asking an assistant to draft the report.</p>
+        </article>
+        <article>
+          <p class="kicker">02</p>
+          <h3>Departure</h3>
+          <p>The author leaves. The reports stay. Nobody can say what they measure, so two of them disagree.</p>
+        </article>
+        <article>
+          <p class="kicker">03</p>
+          <h3>Delete</h3>
+          <p>A project wipes the pile and recentralizes. The same loop comes back.</p>
+        </article>
+      </div>
+      <p class="exit"><b>Once</b> Build the metric once. The owner changes the logic, and every report changes with it. Then the count of reports does not matter.</p>
+      <p class="kill">Who owns the revenue number? If nobody can say, the cycle has started. An assistant that drafts the metric does not become the owner.</p>
     </section>
 
     <section class="band" id="case">
@@ -676,6 +747,7 @@
             <li><span class="mark" aria-hidden="true">×</span><span><b>Unvalidated data</b> and no quality checks.</span></li>
             <li><span class="mark" aria-hidden="true">×</span><span><b>Dashboard-only thinking</b> with no decision.</span></li>
             <li><span class="mark" aria-hidden="true">×</span><span><b>No lineage</b> and no way to trace the number.</span></li>
+            <li><span class="mark" aria-hidden="true">×</span><span><b>A number that dies</b> when the person who built it leaves.</span></li>
           </ul>
         </div>
         <div class="panel">
@@ -701,7 +773,7 @@
           <span>Delivery · Data · AI automation</span>
         </div>
       </div>
-      <p class="changed"><b>Changed</b> The figure faces the decision screen. Ask, grain, truth, and use use the glowing marks.</p>
+      <p class="changed"><b>Changed</b> The cycle: a bottleneck, a departure, two numbers, then a project that deletes the pile. The metric is built once, and someone owns it.</p>
     </footer>
   </article>
   <script>
