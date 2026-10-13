@@ -14,6 +14,8 @@ The card is a decision scene, not a reference table.
 
 Accent is ice blue and green on a near-black navy sheet. Amber marks the disagreeing report. Motion is a few sparks on the hero stream; it stops for `prefers-reduced-motion`. Print flattens to a light sheet.
 
+Below 680px the hero photo is the background of the headline, each stage icon sits in the top corner of its card, and each credit-step mark sits beside that step’s text. Wider layouts keep the icons in a row above the four chambers.
+
 ## Automation
 
 Weekly judgment is described in `.state/AUTOMATION_CONTRACT.md` and `docs/weekly-refresh-prompt.md`. Discovery reads tool names out of `index.html`. The version stamp element id is `version-stamp`. The Changed line is `<p class="changed"><b>Changed</b> …`.
