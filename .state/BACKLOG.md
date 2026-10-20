@@ -2,6 +2,7 @@
 
 ## Active
 
+- [x] On Ask, show one supposed overdue count, share, and unpaid amount, then one filled brief
 - [x] Turn the analytics card into the ask → grain → truth → use scene, with a reconciliation gate
 - [x] Copy main onto alextouvras.com on every card push
 - [x] On a phone, embed the illustrations in the card text
